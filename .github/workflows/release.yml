@@ -21,7 +21,8 @@ jobs:
             libboost-filesystem-dev \
             libboost-system-dev \
             cmake \
-            build-essential
+            build-essential \
+            libboost-dev
       
       - name: Configure CMake
         working-directory: ./hw2/ip_filter
@@ -31,7 +32,7 @@ jobs:
         working-directory: ./hw2/ip_filter
         run: cmake --build .
       
-      - name: Test
+      - name: Run tests
         working-directory: ./hw2/ip_filter
         run: ctest --output-on-failure
       
