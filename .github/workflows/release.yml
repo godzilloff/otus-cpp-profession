@@ -2,8 +2,13 @@ name: 'C++ CI'
 
 on:
   push:
-    tag:
+    tags:
       - v*
+    branches:
+      - 'hw2'
+
+permissions:
+  contents: write 
 
 jobs:
   build:
