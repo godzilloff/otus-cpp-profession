@@ -9,7 +9,7 @@
 #include "lib.h"
 #include "ipv4.h"
 
-int main(int argc, char const *argv[])
+int main(int /*argc*/, char const *argv[])
 {
     // std::cout << "argc = " << argc << std::endl;
     // for (int i = 0; i < argc; ++i) {
