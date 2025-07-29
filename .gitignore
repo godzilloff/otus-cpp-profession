@@ -1,0 +1,6 @@
+build/
+*.pdb
+*.obj
+.vscode/
+backup/
+hw4/print_ip/docs/

@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw3'
+      - 'hw4'
 
 permissions:
   contents: write 
@@ -24,21 +24,23 @@ jobs:
           sudo apt-get install -y \
             cmake \
             build-essential
+            doxygen \
+            graphviz
       
       - name: Configure CMake
-        working-directory: ./hw3/allocator
+        working-directory: ./hw4/print_ip
         run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       
       - name: Build
-        working-directory: ./hw3/allocator
+        working-directory: ./hw4/print_ip
         run: cmake --build .
       
       - name: Run tests
-        working-directory: ./hw3/allocator
+        working-directory: ./hw4/print_ip
         run: ctest --output-on-failure
       
       - name: Package
-        working-directory: ./hw3/allocator
+        working-directory: ./hw4/print_ip
         run: cmake --build . --target package
       
       - name: Create Release
@@ -59,6 +61,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./hw3/allocator/allocator-0.0.${{ github.run_number }}-Linux.deb
-          asset_name: allocator-0.0.${{ github.run_number }}-Linux.deb
+          asset_path: ./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb
+          asset_name: print_ip-0.4.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+
+      - name: Generate Doxygen HTML
+        run: |
+          cd hw4/print_ip
+          mkdir -p docs/html  # create dir
+          doxygen Doxyfile    # gen docs
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./hw4/print_ip/docs/html  # path
+          keep_files: false         # not clear
