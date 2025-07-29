@@ -45,8 +45,10 @@ jobs:
       
       - name: Create Release and Upload Asset
         run: |
-          if [ ! -f "./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb" ]; then
-            echo "File not found!"
+          FILE_PATH="./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb"
+          
+          if [ ! -f "$FILE_PATH" ]; then
+            echo "Error: File $FILE_PATH not found!"
             exit 1
           fi
           
@@ -55,7 +57,7 @@ jobs:
             --draft=false \
             --prerelease=false \
             --notes "" \
-            "./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb:print_ip-0.4.${{ github.run_number }}-Linux.deb"
+            "$FILE_PATH"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
