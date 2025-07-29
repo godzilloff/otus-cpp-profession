@@ -45,13 +45,17 @@ jobs:
       
       - name: Create Release and Upload Asset
         run: |
+          if [ ! -f "./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb" ]; then
+            echo "File not found!"
+            exit 1
+          fi
+          
           gh release create ${{ github.ref_name }} \
             --title "Release ${{ github.ref_name }}" \
             --draft=false \
             --prerelease=false \
-            ./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb \
-            --name "print_ip-0.4.${{ github.run_number }}-Linux.deb" \
-            --content-type "application/vnd.debian.binary-package"
+            --notes "" \
+            "./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb:print_ip-0.4.${{ github.run_number }}-Linux.deb"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
