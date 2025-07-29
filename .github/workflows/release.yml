@@ -64,12 +64,16 @@ jobs:
       - name: Generate Doxygen HTML
         run: |
           cd hw4/print_ip
-          mkdir -p docs/html  # create dir
-          doxygen Doxyfile    # gen docs
+          mkdir -p docs/html  # create output dir
+          # update OUTPUT_DIRECTORY in Doxyfile
+          sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
+          sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
+          doxygen Doxyfile
+        shell: bash
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw4/print_ip/docs/html  # path
-          keep_files: false         # not clear
+          publish_dir: ./hw4/print_ip/docs/html
+          keep_files: false
