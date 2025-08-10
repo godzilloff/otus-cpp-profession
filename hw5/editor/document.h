@@ -6,6 +6,8 @@
 
 /**
  * @class Document
+ * @ingroup Model
+ * @implements MVC-Model
  * @brief Core data model for vector graphics document.
  *
  * Manages collection of shapes and provides serialization capabilities.

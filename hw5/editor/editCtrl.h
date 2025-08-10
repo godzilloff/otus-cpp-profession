@@ -5,6 +5,8 @@
 
 /**
  * @class EditorController
+ * @ingroup Controller
+ * @implements MVC-Controller
  * @brief Main controller class for the vector graphics editor (MVC pattern).
  *
  * Manages document operations including creation, import/export,

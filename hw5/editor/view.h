@@ -4,6 +4,8 @@
 
 /**
  * @class ConsoleView
+ * @ingroup View
+ * @implements MVC-View
  * @brief Console-based view following MVC pattern (replaces GUI in this implementation)
  */
 class ConsoleView {
