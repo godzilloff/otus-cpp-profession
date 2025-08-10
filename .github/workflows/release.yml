@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw4'
+      - 'hw5'
 
 permissions:
   contents: write
@@ -18,7 +18,6 @@ jobs:
         with:
           submodules: true
       
-      # Установка только необходимых зависимостей
       - name: Install minimal dependencies
         run: |
           sudo apt-get update
@@ -29,27 +28,27 @@ jobs:
             graphviz
       
       - name: Configure CMake
-        working-directory: ./hw4/print_ip
+        working-directory: ./hw5/editor
         run: cmake -DCMAKE_BUILD_TYPE=Release -DPATCH_VERSION=${{ github.run_number }} .
       
       - name: Build
-        working-directory: ./hw4/print_ip
-        run: cmake --build . --parallel  # Параллельная сборка
+        working-directory: ./hw5/editor
+        run: cmake --build . --parallel
       
       - name: Run tests
-        working-directory: ./hw4/print_ip
-        run: ctest --output-on-failure --parallel 4  # Параллельные тесты
+        working-directory: ./hw5/editor
+        run: ctest --output-on-failure --parallel 4
       
       - name: Package
-        working-directory: ./hw4/print_ip
+        working-directory: ./hw5/editor
         run: cmake --build . --target package --parallel
       
       - name: Create Release and Upload Asset
         run: |
-          FILE_PATH="./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw5/editor/editor-0.5.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
-          gh release create "v0.4.${{ github.run_number }}" \
-            --title "Release v0.4.${{ github.run_number }}" \
+          gh release create "v0.5.${{ github.run_number }}" \
+            --title "Release v0.5.${{ github.run_number }}" \
             --draft=false \
             --prerelease=false \
             --notes "" \
@@ -59,7 +58,7 @@ jobs:
 
       - name: Generate Doxygen HTML
         run: |
-          cd hw4/print_ip
+          cd hw5/editor
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
@@ -69,6 +68,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw4/print_ip/docs/html
-          destination_dir: hw4
+          publish_dir: ./hw5/editor/docs/html
+          destination_dir: hw5
           keep_files: true
