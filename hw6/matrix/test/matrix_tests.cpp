@@ -24,12 +24,12 @@ struct MatrixFixture : public testing::Test {
         std::cout << "SetUp" << std::endl;
 
         // Create list with elementCount elements    // Заполнение главной диагонали
-        for (int i = 0; i < CNT; ++i) {
+        for (size_t i = 0; i < CNT; ++i) {
             matrix[i][i] = i;
         }
 
         // Заполнение второстепенной диагонали
-        for (int i = 0; i < CNT; ++i) {
+        for (size_t i = 0; i < CNT; ++i) {
             matrix[i][9 - i] = 9 - i;
         }
 
@@ -59,11 +59,11 @@ TEST(Matrix, PushBack) {
     Matrix<int, 0> matrix;
 
     // Act
-    for (int i = 0; i < count; ++i)
+    for (size_t i = 0; i < count; ++i)
         matrix[i][i] = i;
 
     // Заполнение второстепенной диагонали
-    for (int i = 0; i < count; ++i)
+    for (size_t i = 0; i < count; ++i)
         matrix[i][9 - i] = 9 - i;
 
     // Assert
