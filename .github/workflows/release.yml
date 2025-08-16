@@ -14,7 +14,7 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       
@@ -27,15 +27,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
       
-      # Кеширование сборки GoogleTest
-      - name: Cache GTest build
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/googletest
-            /usr/local/lib/cmake/GTest
-          key: ${{ runner.os }}-gtest-${{ hashFiles('**/CMakeLists.txt') }}
-      
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -44,13 +35,22 @@ jobs:
             build-essential \
             libgtest-dev \
             doxygen graphviz plantuml
-          # Сборка и установка GTest если не в кеше
-          if [ ! -f "/usr/local/lib/cmake/GTest/GTestConfig.cmake" ]; then
-            echo "Building GTest from source..."
+
+      # Локальное кеширование GTest (без системных путей)
+      - name: Cache GTest build
+        uses: actions/cache@v3
+        with:
+          path: ~/.local/gtest
+          key: ${{ runner.os }}-gtest-${{ hashFiles('**/CMakeLists.txt') }}
+      
+      - name: Build GTest locally
+        run: |
+          if [ ! -f "$HOME/.local/gtest/lib/libgtest.a" ]; then
+            mkdir -p $HOME/.local/gtest
             cd /usr/src/googletest
-            sudo cmake .
-            sudo make
-            sudo make install
+            cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local/gtest .
+            make
+            make install
           fi
       
       # Кеширование сборки проекта
@@ -70,7 +70,9 @@ jobs:
         run: |
           mkdir -p build
           cd build
-          cmake -DCMAKE_BUILD_TYPE=Release -DPATCH_VERSION=${{ github.run_number }} ..
+          cmake -DCMAKE_BUILD_TYPE=Release \
+                -DPATCH_VERSION=${{ github.run_number }} \
+                -DGTEST_ROOT=$HOME/.local/gtest ..
       
       - name: Build
         working-directory: ./hw6/matrix/build
