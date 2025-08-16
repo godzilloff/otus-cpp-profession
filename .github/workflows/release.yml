@@ -13,6 +13,8 @@ permissions:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      GTEST_ROOT: ${{ github.workspace }}/.local/gtest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,25 +36,30 @@ jobs:
             cmake \
             build-essential \
             libgtest-dev \
+            git \
             doxygen graphviz plantuml
 
-      # Локальное кеширование GTest (без системных путей)
-      - name: Cache GTest build
+      # Кеширование локальной сборки GTest
+      - name: Cache GTest
         uses: actions/cache@v3
+        id: gtest-cache
         with:
-          path: ~/.local/gtest
+          path: ${{ github.workspace }}/.local/gtest
           key: ${{ runner.os }}-gtest-${{ hashFiles('**/CMakeLists.txt') }}
-      
-      - name: Build GTest locally
+
+      # Сборка GTest в рабочей директории
+      - name: Build GTest
+        if: steps.gtest-cache.outputs.cache-hit != 'true'
         run: |
-          if [ ! -f "$HOME/.local/gtest/lib/libgtest.a" ]; then
-            mkdir -p $HOME/.local/gtest
-            cd /usr/src/googletest
-            cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local/gtest .
-            make
-            make install
-          fi
-      
+          mkdir -p ${{ github.workspace }}/.local/gtest
+          git clone --depth 1 --branch release-1.12.1 \
+            https://github.com/google/googletest.git ${{ github.workspace }}/googletest
+          mkdir -p ${{ github.workspace }}/googletest/build
+          cd ${{ github.workspace }}/googletest/build
+          cmake -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/.local/gtest ..
+          make -j$(nproc)
+          make install
+
       # Кеширование сборки проекта
       - name: Cache project build
         uses: actions/cache@v3
@@ -72,7 +79,7 @@ jobs:
           cd build
           cmake -DCMAKE_BUILD_TYPE=Release \
                 -DPATCH_VERSION=${{ github.run_number }} \
-                -DGTEST_ROOT=$HOME/.local/gtest ..
+                -DGTEST_ROOT=${{ github.workspace }}/.local/gtest ..
       
       - name: Build
         working-directory: ./hw6/matrix/build
@@ -123,3 +130,4 @@ jobs:
           publish_dir: ./hw6/matrix/docs/html
           destination_dir: hw6
           keep_files: true
+          
