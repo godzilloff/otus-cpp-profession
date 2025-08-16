@@ -83,7 +83,7 @@ jobs:
           ctest --output-on-failure --parallel 4 --output-junit test_results/results.xml
       
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
