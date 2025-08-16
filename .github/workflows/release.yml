@@ -13,8 +13,6 @@ permissions:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    env:
-      GTEST_ROOT: ${{ github.workspace }}/.local/gtest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,32 +31,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            cmake \
-            build-essential \
-            libgtest-dev \
-            git \
+            cmake build-essential \
+            libgtest-dev googletest google-mock \
             doxygen graphviz plantuml
-
-      # Кеширование локальной сборки GTest
-      - name: Cache GTest
-        uses: actions/cache@v3
-        id: gtest-cache
-        with:
-          path: ${{ github.workspace }}/.local/gtest
-          key: ${{ runner.os }}-gtest-${{ hashFiles('**/CMakeLists.txt') }}
-
-      # Сборка GTest в рабочей директории
-      - name: Build GTest
-        if: steps.gtest-cache.outputs.cache-hit != 'true'
-        run: |
-          mkdir -p ${{ github.workspace }}/.local/gtest
-          git clone --depth 1 --branch release-1.12.1 \
-            https://github.com/google/googletest.git ${{ github.workspace }}/googletest
-          mkdir -p ${{ github.workspace }}/googletest/build
-          cd ${{ github.workspace }}/googletest/build
-          cmake -DCMAKE_INSTALL_PREFIX=${{ github.workspace }}/.local/gtest ..
-          make -j$(nproc)
-          make install
 
       # Кеширование сборки проекта
       - name: Cache project build
@@ -78,8 +53,7 @@ jobs:
           mkdir -p build
           cd build
           cmake -DCMAKE_BUILD_TYPE=Release \
-                -DPATCH_VERSION=${{ github.run_number }} \
-                -DGTEST_ROOT=${{ github.workspace }}/.local/gtest ..
+                -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
         working-directory: ./hw6/matrix/build
@@ -130,4 +104,3 @@ jobs:
           publish_dir: ./hw6/matrix/docs/html
           destination_dir: hw6
           keep_files: true
-          

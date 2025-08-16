@@ -12,16 +12,7 @@ if (MSVC AND NOT GTEST_FOUND)
     set(GTEST_ROOT "c:/lib/googletest/" CACHE PATH "Path to Google Test")
 endif()
 
-# Проверка что мы в GitHub Actions
-if(DEFINED ENV{GITHUB_ACTIONS})
-    message(STATUS "Running in GitHub Actions")
-    find_package(GTest REQUIRED PATHS $ENV{HOME}/.local/gtest NO_DEFAULT_PATH)
-    set(IN_GITHUB_ACTIONS TRUE)
-else()
-    find_package(GTest REQUIRED)
-    set(IN_GITHUB_ACTIONS FALSE)
-endif()
-
+find_package(GTest REQUIRED)
 include(GoogleTest)
 
 add_executable(matrix_cli 
