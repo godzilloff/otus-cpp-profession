@@ -1,0 +1,5 @@
+<map id="Line" name="Line">
+<area shape="rect" id="Node000001" title="Concrete implementation of a line shape." alt="" coords="5,159,104,304"/>
+<area shape="rect" id="Node000002" href="$classShape.html" title="Abstract base class for all geometric shapes." alt="" coords="5,5,104,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,125,57,158,52,158,52,125"/>
+</map>

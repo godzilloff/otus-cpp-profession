@@ -1,0 +1,17 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main program function." alt="" coords="5,149,60,175"/>
+<area shape="rect" id="Node000002" href="$classEditorController.html#a37aba5c49eee6218f07c17853934d024" title="Adds a shape to current document." alt="" coords="123,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,148,60,96,80,66,106,41,118,34,121,39,110,45,84,70,64,99,41,150"/>
+<area shape="rect" id="Node000003" href="$classEditorController.html#a75464e9967f400e687f0ccf0e33860af" title="Creates a new blank document." alt="" coords="135,55,308,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="47,147,73,126,107,105,123,98,125,103,109,110,77,130,50,151"/>
+<area shape="rect" id="Node000004" href="$classConsoleView.html#a280543f895ececc13b5d68e842c87ab8" title="Renders document state to console." alt="" coords="108,120,335,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="60,155,126,145,127,150,61,160"/>
+<area shape="rect" id="Node000006" href="$classEditorController.html#a4cb8a672f78780d1faa961e5cda22090" title="Exports document to file." alt="" coords="134,170,309,210"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="61,163,120,172,120,178,60,169"/>
+<area shape="rect" id="Node000007" href="$classEditorController.html#a348822872357741c9243fc8f323ec499" title="Provides read&#45;only access to the current document." alt="" coords="111,235,331,260"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="48,173,75,197,109,220,130,228,128,233,107,224,72,201,45,177"/>
+<area shape="rect" id="Node000008" href="$classEditorController.html#ae4c1191298fd728bf6c19a9706847067" title="Removes shape by name from current document." alt="" coords="130,285,313,325"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="42,174,66,221,86,247,110,269,121,276,118,281,106,273,82,250,62,223,37,176"/>
+<area shape="rect" id="Node000005" href="$classDocument.html#a7f9a808c2bacfc853741b5dcc8fb2135" title="Provides read&#45;only access to shapes collection." alt="" coords="383,120,548,145"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="335,130,369,130,369,135,335,135"/>
+</map>

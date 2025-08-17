@@ -1,0 +1,5 @@
+<map id="ConsoleView" name="ConsoleView">
+<area shape="rect" id="Node000001" title="Console&#45;based view following MVC pattern (replaces GUI in this implementation)" alt="" coords="5,119,159,184"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="60,5,104,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,84,85,119,79,119,79,84"/>
+</map>

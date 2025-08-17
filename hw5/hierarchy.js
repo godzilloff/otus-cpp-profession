@@ -1,0 +1,12 @@
+var hierarchy =
+[
+    [ "MVC", null, [
+      [ "ConsoleView", "classConsoleView.html", null ],
+      [ "Document", "classDocument.html", null ],
+      [ "EditorController", "classEditorController.html", null ]
+    ] ],
+    [ "Shape", "classShape.html", [
+      [ "Circle", "classCircle.html", null ],
+      [ "Line", "classLine.html", null ]
+    ] ]
+];

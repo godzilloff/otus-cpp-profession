@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classShape.html" title="Abstract base class for all geometric shapes." alt="" coords="5,31,68,56"/>
+<area shape="rect" id="Node000001" href="$classCircle.html" title="Concrete implementation of a circle shape." alt="" coords="116,5,175,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="81,30,115,22,116,27,82,36"/>
+<area shape="rect" id="Node000002" href="$classLine.html" title="Concrete implementation of a line shape." alt="" coords="121,55,170,80"/>
+<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="82,51,121,59,120,65,81,56"/>
+</map>
