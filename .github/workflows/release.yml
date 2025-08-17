@@ -50,8 +50,6 @@ jobs:
       - name: Configure CMake
         working-directory: ./hw4/print_ip
         run: |
-          mkdir -p build
-          cd build
           cmake -DCMAKE_BUILD_TYPE=Release \
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
