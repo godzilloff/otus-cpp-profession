@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,111,124,137"/>
+<area shape="rect" id="Node000001" href="$structare__all__same.html" title=" " alt="" coords="195,13,359,38"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="89,100,126,72,171,47,203,36,205,41,173,52,129,77,92,105"/>
+<area shape="rect" id="Node000003" href="$structare__all__same.html" title="Checks if all types in Ts list are the same." alt="" coords="201,62,353,87"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="131,106,171,96,220,85,221,90,173,101,132,111"/>
+<area shape="rect" id="Node000004" href="$structis__homogeneous__tuple.html" title="Checks if tuple is homogeneous (all elements of same type)" alt="" coords="172,111,383,137"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="138,121,172,121,172,127,138,127"/>
+<area shape="rect" id="Node000005" href="$structis__string.html" title="Checks if type T is a string (std::string, char[], const char*)" alt="" coords="220,161,335,186"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="134,137,222,158,221,163,133,142"/>
+<area shape="rect" id="Node000006" href="$structis__vector__or__list.html" title="Checks if type T is a vector or list." alt="" coords="194,210,361,235"/>
+<area shape="poly" id="edge7_Node000000_Node000006" title=" " alt="" coords="93,143,129,170,173,195,209,207,207,212,171,200,127,175,89,147"/>
+<area shape="rect" id="Node000002" href="$structis__homogeneous__tuple_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html" title="Specialization for std::tuple." alt="" coords="431,5,603,45"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="373,23,430,23,430,28,373,28"/>
+</map>
