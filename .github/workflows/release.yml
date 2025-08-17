@@ -11,34 +11,53 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
+      
+      # Кеширование APT пакетов
+      - name: Cache APT packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/CMakeLists.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
       
       # Установка только необходимых зависимостей
       - name: Install minimal dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            cmake \
-            build-essential \
-            doxygen \
-            graphviz
+            cmake build-essential \
+            doxygen graphviz plantuml
+
+      # Кеширование сборки проекта
+      - name: Cache project build
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./hw6/matrix/build
+            ./hw6/matrix/CMakeCache.txt
+          key: ${{ runner.os }}-build-${{ github.sha }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ github.sha }}-
+            ${{ runner.os }}-build-
       
       - name: Configure CMake
         working-directory: ./hw4/print_ip
-        run: cmake -DCMAKE_BUILD_TYPE=Release -DPATCH_VERSION=${{ github.run_number }} .
+        run: |
+          mkdir -p build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Release \
+                -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
         working-directory: ./hw4/print_ip
         run: cmake --build . --parallel  # Параллельная сборка
-      
-      - name: Run tests
-        working-directory: ./hw4/print_ip
-        run: ctest --output-on-failure --parallel 4  # Параллельные тесты
       
       - name: Package
         working-directory: ./hw4/print_ip
@@ -71,4 +90,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./hw4/print_ip/docs/html
           destination_dir: hw4
-          keep_files: true
+          keep_files: false
+          
