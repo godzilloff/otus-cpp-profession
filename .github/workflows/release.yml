@@ -92,5 +92,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./hw4/print_ip/docs/html
           destination_dir: hw4
+          force_orphan: true  # Это полностью очистит ветку перед развертыванием
           keep_files: false
           
