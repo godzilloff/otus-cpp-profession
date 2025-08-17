@@ -40,30 +40,34 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ./hw6/matrix/build
-            ./hw6/matrix/CMakeCache.txt
+            ./hw4/print_ip/build
+            ./hw4/print_ip/CMakeCache.txt
           key: ${{ runner.os }}-build-${{ github.sha }}-${{ github.run_number }}
           restore-keys: |
             ${{ runner.os }}-build-${{ github.sha }}-
             ${{ runner.os }}-build-
       
-      - name: Configure CMake
+      - name: Create build directory
         working-directory: ./hw4/print_ip
+        run: mkdir -p build
+      
+      - name: Configure CMake
+        working-directory: ./hw4/print_ip/build
         run: |
           cmake -DCMAKE_BUILD_TYPE=Release \
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
-        working-directory: ./hw4/print_ip
-        run: cmake --build . --parallel  # Параллельная сборка
+        working-directory: ./hw4/print_ip/build
+        run: cmake --build . --parallel
       
       - name: Package
-        working-directory: ./hw4/print_ip
+        working-directory: ./hw4/print_ip/build
         run: cmake --build . --target package --parallel
       
       - name: Create Release and Upload Asset
         run: |
-          FILE_PATH="./hw4/print_ip/print_ip-0.4.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw4/print_ip/build/print_ip-0.4.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
           gh release create "v0.4.${{ github.run_number }}" \
             --title "Release v0.4.${{ github.run_number }}" \
@@ -75,8 +79,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate Doxygen HTML
+        working-directory: ./hw4/print_ip
         run: |
-          cd hw4/print_ip
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
