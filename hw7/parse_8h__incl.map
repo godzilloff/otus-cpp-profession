@@ -1,0 +1,21 @@
+<map id="parse.h" name="parse.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="375,5,446,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="375,28,99,81,98,76,374,23"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="376,31,182,81,181,76,374,26"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="193,79,255,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="382,33,268,76,266,71,380,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="280,79,357,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="398,33,346,72,343,68,394,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="381,79,440,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="413,31,413,65,408,65,408,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="465,79,538,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="427,29,477,68,474,72,424,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="563,79,637,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="442,28,557,71,555,76,440,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="661,79,747,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="447,25,648,74,647,79,445,30"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="771,79,837,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="447,22,580,43,758,76,757,81,579,48,446,27"/>
+</map>

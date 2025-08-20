@@ -1,0 +1,5 @@
+<map id="ConsoleObserver" name="ConsoleObserver">
+<area shape="rect" id="Node000001" title="Конкретный наблюдатель для вывода команд в консоль" alt="" coords="5,139,131,204"/>
+<area shape="rect" id="Node000002" href="$classIObserver.html" title="Базовый класс наблюдателя в паттерне &quot;Наблюдатель&quot;." alt="" coords="11,5,125,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,104,71,138,65,138,65,104"/>
+</map>
