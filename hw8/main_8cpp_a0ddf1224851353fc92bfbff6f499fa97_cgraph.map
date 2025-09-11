@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Main entry point for the duplicate file finder utility." alt="" coords="5,109,60,134"/>
+<area shape="rect" id="Node000002" href="$classDuplicateFinder.html#a8801e797d2ee15d588564414a76c99f1" title="Adds a directory to exclude from search." alt="" coords="108,5,264,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,106,72,81,107,55,117,49,120,54,109,60,75,85,48,110"/>
+<area shape="rect" id="Node000003" href="$classDuplicateFinder.html#acde94c6b80c7d51ae11098204b196088" title="Adds a file mask pattern for filtering files." alt="" coords="108,69,264,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,113,94,106,95,111,61,118"/>
+<area shape="rect" id="Node000004" href="$classDuplicateFinder.html#a914959c4ebe380584839c29dac6f40ad" title="Adds a directory to search for files." alt="" coords="108,133,264,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,124,95,132,94,137,60,130"/>
+<area shape="rect" id="Node000005" href="$classDuplicateFinder.html#a70863b0bf7363ff8218da9f732fac700" title="Executes the duplicate file finding process." alt="" coords="108,197,264,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="48,133,75,158,109,183,120,189,117,194,107,188,72,162,45,136"/>
+</map>
