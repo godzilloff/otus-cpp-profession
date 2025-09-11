@@ -1,11 +1,14 @@
 #include "duplicate_finder.h"
 #include <gtest/gtest.h>
 #include <fstream>
+#include <sstream>
 
 class DuplicateFinderTest : public ::testing::Test {
 protected:
     void SetUp() override {
         test_dir_ = fs::temp_directory_path() / "duplicate_finder_test";
+        // Очищаем директорию перед созданием
+        fs::remove_all(test_dir_);
         fs::create_directories(test_dir_);
         
         // Создаем структуру тестовых файлов
@@ -13,14 +16,16 @@ protected:
     }
     
     void TearDown() override {
+        // Даем время файлам закрыться перед удалением
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
         fs::remove_all(test_dir_);
     }
     
     void create_test_files() {
         // Создаем идентичные файлы
-        create_test_file("dir1/file1.txt", "Same content");
-        create_test_file("dir1/file2.txt", "Same content");
-        create_test_file("dir2/file3.txt", "Same content");
+        create_test_file("dir1/file1.txt", "Same content 123");
+        create_test_file("dir1/file2.txt", "Same content 123"); 
+        create_test_file("dir2/file3.txt", "Same content 123");
         
         // Создаем разные файлы
         create_test_file("dir1/unique.txt", "Unique content");
@@ -30,8 +35,8 @@ protected:
         create_test_file("dir1/small.txt", "X");
         
         // Создаем файлы с разными масками
-        create_test_file("dir1/image.jpg", "Image content");
-        create_test_file("dir2/image.jpg", "Image content");
+        create_test_file("dir1/image.jpg", "Image content 123");
+        create_test_file("dir2/image.jpg", "Image content 123");
         create_test_file("dir1/document.pdf", "PDF content");
     }
     
@@ -39,7 +44,7 @@ protected:
         fs::path full_path = test_dir_ / rel_path;
         fs::create_directories(full_path.parent_path());
         
-        std::ofstream file(full_path.string());
+        std::ofstream file(full_path.string(), std::ios::binary);
         file << content;
         file.close();
     }
@@ -66,13 +71,15 @@ TEST_F(DuplicateFinderTest, FindBasicDuplicatesGuaranteed) {
     fs::path file2 = test_dir_ / "test2.txt";
     fs::path file3 = test_dir_ / "test3.txt";
     
+    std::string identical_content = "Exactly the same content for all three files with some more text to make it longer";
+    
     {
         std::ofstream f1(file1.string());
         std::ofstream f2(file2.string());
         std::ofstream f3(file3.string());
-        f1 << "Exactly the same content for all three files";
-        f2 << "Exactly the same content for all three files";
-        f3 << "Exactly the same content for all three files";
+        f1 << identical_content;
+        f2 << identical_content;
+        f3 << identical_content;
     }
     
     DuplicateFinder finder(8, FileHasher::HashAlgorithm::CRC32, 1, 0);

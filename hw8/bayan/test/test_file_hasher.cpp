@@ -8,6 +8,8 @@ protected:
     void SetUp() override {
         // Создаем временные файлы для тестирования
         test_dir_ = fs::temp_directory_path() / "duplicate_finder_test";
+        // Очищаем директорию перед созданием
+        fs::remove_all(test_dir_);
         fs::create_directories(test_dir_);
         
         // Создаем тестовые файлы
@@ -18,6 +20,8 @@ protected:
     }
     
     void TearDown() override {
+        // Даем время файлам закрыться перед удалением
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
         // Удаляем временные файлы
         fs::remove_all(test_dir_);
     }
