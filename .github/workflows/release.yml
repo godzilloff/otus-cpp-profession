@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw7'
+      - 'hw8'
 
 permissions:
   contents: write
@@ -40,15 +40,15 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ./hw7/parser/build
-            ./hw7/parser/CMakeCache.txt
+            ./hw8/bayan/build
+            ./hw8/bayan/CMakeCache.txt
           key: ${{ runner.os }}-build-${{ github.sha }}-${{ github.run_number }}
           restore-keys: |
             ${{ runner.os }}-build-${{ github.sha }}-
             ${{ runner.os }}-build-
       
       - name: Configure CMake
-        working-directory: ./hw7/parser
+        working-directory: ./hw8/bayan
         run: |
           mkdir -p build
           cd build
@@ -56,11 +56,11 @@ jobs:
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
-        working-directory: ./hw7/parser/build
+        working-directory: ./hw8/bayan/build
         run: cmake --build . --parallel
       
       - name: Run tests with XML output
-        working-directory: ./hw7/parser/build
+        working-directory: ./hw8/bayan/build
         run: |
           mkdir -p test_results
           ctest --output-on-failure --parallel 4 --output-junit test_results/results.xml
@@ -70,18 +70,18 @@ jobs:
         if: always()
         with:
           name: test-results
-          path: ./hw7/parser/build/test_results/results.xml
+          path: ./hw8/bayan/build/test_results/results.xml
       
       - name: Package
-        working-directory: ./hw7/parser/build
+        working-directory: ./hw8/bayan/build
         run: cmake --build . --target package --parallel
       
       - name: Create Release
         run: |
-          FILE_PATH="./hw7/parser/build/bulk-0.7.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw8/bayan/build/bayan-0.8.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
-          gh release create "v0.7.${{ github.run_number }}" \
-            --title "Release v0.7.${{ github.run_number }}" \
+          gh release create "v0.8.${{ github.run_number }}" \
+            --title "Release v0.8.${{ github.run_number }}" \
             --draft=false \
             --prerelease=false \
             --notes "" \
@@ -91,7 +91,7 @@ jobs:
 
       - name: Generate Doxygen HTML
         run: |
-          cd hw7/parser
+          cd hw8/bayan
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
@@ -101,6 +101,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw7/parser/docs/html
-          destination_dir: hw7
+          publish_dir: ./hw8/bayan/docs/html
+          destination_dir: hw8
           keep_files: true
