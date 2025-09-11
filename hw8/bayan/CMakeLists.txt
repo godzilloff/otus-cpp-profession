@@ -17,11 +17,16 @@ set(BOOST_LIBRARYDIR $ENV{BOOST_LIBRARYDIR})
 set(CMAKE_PREFIX_PATH "${BOOST_ROOT};${CMAKE_PREFIX_PATH}")
 
 # === BOOST ===
-find_package(Boost REQUIRED COMPONENTS filesystem system)
+# Добавляем все необходимые компоненты Boost
+find_package(Boost REQUIRED COMPONENTS 
+    filesystem 
+    program_options 
+    iostreams 
+    system
+)
 
 message(STATUS "Boost found: ${Boost_FOUND}")
 message(STATUS "Boost include dirs: ${Boost_INCLUDE_DIRS}")
-message(STATUS "Boost include dirs2: ${Boost_INCLUDE_DIR}")
 message(STATUS "Boost library dirs: ${Boost_LIBRARY_DIRS}")
 message(STATUS "Boost libraries: ${Boost_LIBRARIES}")
 
@@ -32,30 +37,36 @@ else()
     message(FATAL_ERROR "Boost not found! Please set BOOST_ROOT environment variable.")
 endif()
 
-# if (MSVC)
-#     set(BOOST_ROOT "C:/lib/boost_1_87_0/include/boost-1_87/")
-# endif()
-
 find_package(GTest REQUIRED)
 include(GoogleTest)
 
 add_executable(bayan 
     src/main.cpp
-    src/duplicate_finder.cpp )
+    src/duplicate_finder.cpp 
+    src/duplicate_finder.h)
 
 add_executable(bayan_test 
     test/main.cpp
     src/duplicate_finder.cpp
+    src/duplicate_finder.h
     test/test_file_hasher.cpp
-    test/test_duplicate_finder.cpp )
+    test/test_duplicate_finder.cpp)
 
 set_target_properties(bayan bayan_test 
     PROPERTIES
-    CXX_STANDARD 20
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
-# Add src to the include directories for the test target
+# Линковка для основного исполняемого файла bayan
+target_link_libraries(bayan PRIVATE
+    Boost::filesystem
+    Boost::program_options
+    Boost::iostreams
+    Boost::system
+)
+
+# Линковка для тестового исполняемого файла
 target_include_directories(
     bayan_test PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
@@ -65,10 +76,14 @@ target_include_directories(
 target_link_libraries(
     bayan_test PRIVATE
     GTest::gtest_main
+    Boost::filesystem
+    Boost::program_options
+    Boost::iostreams
+    Boost::system
 )
 
-message(STATUS ${GTEST_INCLUDE_DIRS})
-message(STATUS ${GTEST_BOTH_LIBRARIES})
+message(STATUS "GTest include dirs: ${GTEST_INCLUDE_DIRS}")
+message(STATUS "GTest libraries: ${GTEST_BOTH_LIBRARIES}")
 
 if (MSVC)
     target_compile_options(bayan PRIVATE /W4)
