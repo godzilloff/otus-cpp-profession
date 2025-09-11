@@ -1,6 +1,9 @@
 #include "duplicate_finder.h"
 #include <gtest/gtest.h>
 #include <fstream>
+#include <sstream>
+#include <thread>
+#include <chrono>
 #include <filesystem>
 
 class FileHasherTest : public ::testing::Test {

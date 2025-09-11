@@ -2,6 +2,8 @@
 #include <gtest/gtest.h>
 #include <fstream>
 #include <sstream>
+#include <thread>
+#include <chrono>
 
 class DuplicateFinderTest : public ::testing::Test {
 protected:
