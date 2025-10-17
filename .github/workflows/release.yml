@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw7'
+      - 'hw9'
 
 permissions:
   contents: write
@@ -18,37 +18,15 @@ jobs:
         with:
           submodules: true
       
-      # Кеширование APT пакетов
-      - name: Cache APT packages
-        uses: actions/cache@v3
-        with:
-          path: /var/cache/apt/archives
-          key: ${{ runner.os }}-apt-${{ hashFiles('**/CMakeLists.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-
-      
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             cmake build-essential \
-            libgtest-dev googletest google-mock \
             doxygen graphviz plantuml
-
-      # Кеширование сборки проекта
-      - name: Cache project build
-        uses: actions/cache@v3
-        with:
-          path: |
-            ./hw7/parser/build
-            ./hw7/parser/CMakeCache.txt
-          key: ${{ runner.os }}-build-${{ github.sha }}-${{ github.run_number }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ github.sha }}-
-            ${{ runner.os }}-build-
       
       - name: Configure CMake
-        working-directory: ./hw7/parser
+        working-directory: ./hw9/async_project
         run: |
           mkdir -p build
           cd build
@@ -56,32 +34,19 @@ jobs:
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
-        working-directory: ./hw7/parser/build
+        working-directory: ./hw9/async_project/build
         run: cmake --build . --parallel
       
-      - name: Run tests with XML output
-        working-directory: ./hw7/parser/build
-        run: |
-          mkdir -p test_results
-          ctest --output-on-failure --parallel 4 --output-junit test_results/results.xml
-      
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: ./hw7/parser/build/test_results/results.xml
-      
       - name: Package
-        working-directory: ./hw7/parser/build
+        working-directory: ./hw9/async_project/build
         run: cmake --build . --target package --parallel
       
       - name: Create Release
         run: |
-          FILE_PATH="./hw7/parser/build/bulk-0.7.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw9/async_project/build/async_demo-0.9.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
-          gh release create "v0.7.${{ github.run_number }}" \
-            --title "Release v0.7.${{ github.run_number }}" \
+          gh release create "v0.9.${{ github.run_number }}" \
+            --title "Release v0.9.${{ github.run_number }}" \
             --draft=false \
             --prerelease=false \
             --notes "" \
@@ -91,7 +56,7 @@ jobs:
 
       - name: Generate Doxygen HTML
         run: |
-          cd hw7/parser
+          cd hw9/async_project
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
@@ -101,6 +66,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw7/parser/docs/html
-          destination_dir: hw7
+          publish_dir: ./hw9/async_project/docs/html
+          destination_dir: hw9
           keep_files: true
