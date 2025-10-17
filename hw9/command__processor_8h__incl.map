@@ -1,0 +1,27 @@
+<map id="command_processor.h" name="command_processor.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл классов для многопоточной обработки команд" alt="" coords="503,5,671,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,68,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,28,314,47,200,62,82,82,81,76,199,57,314,42,503,23"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,79,151,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="503,31,350,50,165,81,164,76,349,45,503,25"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="175,79,253,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="522,33,267,81,266,76,521,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="277,79,341,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="543,33,355,81,353,76,541,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="365,79,428,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="558,33,442,76,440,71,556,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="452,79,595,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="579,33,545,70,541,67,575,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="619,79,686,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="600,29,635,67,631,70,596,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="711,79,797,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="615,28,715,71,713,76,613,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="822,79,886,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="631,28,809,75,808,81,629,33"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="910,79,977,104"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="654,28,897,76,896,81,652,33"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1001,79,1075,104"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="672,27,815,47,988,76,987,81,815,53,671,32"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1099,79,1179,104"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="672,24,858,44,1086,76,1085,81,857,49,671,29"/>
+</map>
