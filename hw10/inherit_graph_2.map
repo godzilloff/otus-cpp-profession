@@ -1,0 +1,7 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classIObserver.html" title="Интерфейс наблюдателя в паттерне &quot;Наблюдатель&quot;." alt="" coords="5,31,91,56"/>
+<area shape="rect" id="Node000001" href="$classConsoleObserver.html" title="Наблюдатель для вывода в консоль" alt="" coords="139,5,272,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="104,32,138,26,139,31,104,37"/>
+<area shape="rect" id="Node000002" href="$classFileObserver.html" title="Наблюдатель для записи блоков команд в файлы" alt="" coords="153,55,257,80"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="105,49,153,57,153,62,104,54"/>
+</map>

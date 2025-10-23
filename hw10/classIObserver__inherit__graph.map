@@ -1,0 +1,7 @@
+<map id="IObserver" name="IObserver">
+<area shape="rect" id="Node000001" title="Интерфейс наблюдателя в паттерне &quot;Наблюдатель&quot;." alt="" coords="78,5,191,91"/>
+<area shape="rect" id="Node000002" href="$classConsoleObserver.html" title="Наблюдатель для вывода в консоль" alt="" coords="5,139,131,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,104,88,140,83,137,103,102"/>
+<area shape="rect" id="Node000003" href="$classFileObserver.html" title="Наблюдатель для записи блоков команд в файлы" alt="" coords="155,139,251,204"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,101,187,137,182,140,162,104"/>
+</map>

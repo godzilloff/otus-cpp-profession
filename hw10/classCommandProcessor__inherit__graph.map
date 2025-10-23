@@ -1,0 +1,5 @@
+<map id="CommandProcessor" name="CommandProcessor">
+<area shape="rect" id="Node000001" title="Обработчик команд с поддержкой паттерна Observer." alt="" coords="5,179,185,384"/>
+<area shape="rect" id="Node000002" href="$classIObservable.html" title="Интерфейс наблюдаемого объекта" alt="" coords="31,5,159,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,144,98,178,93,178,93,144"/>
+</map>

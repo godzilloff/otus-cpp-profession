@@ -1,0 +1,19 @@
+<map id="observers/file_observer.h" name="observers/file_observer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="228,5,413,31"/>
+<area shape="rect" id="Node000002" href="$observer_8h.html" title=" " alt="" coords="122,79,213,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,33,206,75,204,70,295,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="237,79,311,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="315,32,291,69,287,66,311,30"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="335,79,402,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="331,30,356,66,351,69,326,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="426,79,493,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="344,28,426,70,423,75,342,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,68,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,106,71,148,69,143,145,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="93,152,151,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="162,106,139,142,134,139,158,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="175,152,253,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="177,103,201,139,197,142,173,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="277,152,335,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="191,102,272,143,270,148,188,106"/>
+</map>

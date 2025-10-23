@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bulk: Server Async - Parser: Исходный файл command_processor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bulk: Server Async - Parser
+   </div>
+   <div id="projectbrief">Асинхронный сервер для пакетной обработки команд с многопоточной архитектурой</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('command__processor_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">command_processor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="command__processor_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="observer_8h.html">observer.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="thread__pool_8h.html">thread_pool.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classCommandProcessor.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classCommandProcessor.html">CommandProcessor</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIObservable.html">IObservable</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classCommandProcessor.html">CommandProcessor</a>(<span class="keywordtype">size_t</span> bulk_size);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="classCommandProcessor.html#a8b975af12657aab33323c1b6c5bb2961">~CommandProcessor</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Основной интерфейс</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#a0f12a2ed7e49e491d95c65113599b01e">process_command</a>(std::string_view command);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#a4798ce2654443c02ba6c9a639fe75972">flush_remaining</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#ab996bf390ee7c87a9316e02283c911e9">shutdown</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// IObservable interface</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#ad192029903dc7a21083fdbedf0f6a25b">subscribe</a>(std::shared_ptr&lt;IObserver&gt; observer) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#affa4f448050134bc5a3c9fe07884c27f">unsubscribe</a>(std::shared_ptr&lt;IObserver&gt; observer) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCommandProcessor.html#aa57a850f3bff020c04e4e3451dd69857">notify</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; commands, </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                time_t timestamp, </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keywordtype">void</span>* context_id) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> flush_commands();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">size_t</span> bulk_size_;                                  </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">size_t</span> block_depth_{0};                             </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    std::vector&lt;std::string&gt; commands_;                 </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::chrono::system_clock::time_point first_command_time_; </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    std::mutex command_mutex_;                          </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// Поддержка Observer</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::vector&lt;std::shared_ptr&lt;IObserver&gt;&gt; observers_; </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::mutex observers_mutex_;                        </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">// Пул потоков для асинхронного уведомления</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    std::unique_ptr&lt;ThreadPool&gt; notification_pool_;     </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
+</div>
+<div class="ttc" id="aclassCommandProcessor_html"><div class="ttname"><a href="classCommandProcessor.html">CommandProcessor</a></div><div class="ttdoc">Обработчик команд с поддержкой паттерна Observer.</div><div class="ttdef"><b>Definition</b> command_processor.h:27</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_a0f12a2ed7e49e491d95c65113599b01e"><div class="ttname"><a href="classCommandProcessor.html#a0f12a2ed7e49e491d95c65113599b01e">CommandProcessor::process_command</a></div><div class="ttdeci">void process_command(std::string_view command)</div><div class="ttdoc">Обрабатывает очередную команду</div><div class="ttdef"><b>Definition</b> command_processor.cpp:112</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_a4798ce2654443c02ba6c9a639fe75972"><div class="ttname"><a href="classCommandProcessor.html#a4798ce2654443c02ba6c9a639fe75972">CommandProcessor::flush_remaining</a></div><div class="ttdeci">void flush_remaining()</div><div class="ttdoc">Принудительная обработка оставшихся команд в буфере</div><div class="ttdef"><b>Definition</b> command_processor.cpp:149</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_a8b975af12657aab33323c1b6c5bb2961"><div class="ttname"><a href="classCommandProcessor.html#a8b975af12657aab33323c1b6c5bb2961">CommandProcessor::~CommandProcessor</a></div><div class="ttdeci">~CommandProcessor()</div><div class="ttdoc">Деструктор обработчика команд</div><div class="ttdef"><b>Definition</b> command_processor.cpp:29</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_aa57a850f3bff020c04e4e3451dd69857"><div class="ttname"><a href="classCommandProcessor.html#aa57a850f3bff020c04e4e3451dd69857">CommandProcessor::notify</a></div><div class="ttdeci">void notify(const std::vector&lt; std::string &gt; &amp;commands, time_t timestamp, void *context_id) override</div><div class="ttdoc">Уведомляет всех подписанных наблюдателей о новом блоке команд</div><div class="ttdef"><b>Definition</b> command_processor.cpp:82</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_ab996bf390ee7c87a9316e02283c911e9"><div class="ttname"><a href="classCommandProcessor.html#ab996bf390ee7c87a9316e02283c911e9">CommandProcessor::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">Принудительная остановка всех фоновых потоков</div><div class="ttdef"><b>Definition</b> command_processor.cpp:191</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_ad192029903dc7a21083fdbedf0f6a25b"><div class="ttname"><a href="classCommandProcessor.html#ad192029903dc7a21083fdbedf0f6a25b">CommandProcessor::subscribe</a></div><div class="ttdeci">void subscribe(std::shared_ptr&lt; IObserver &gt; observer) override</div><div class="ttdoc">Подписывает наблюдателя на уведомления</div><div class="ttdef"><b>Definition</b> command_processor.cpp:44</div></div>
+<div class="ttc" id="aclassCommandProcessor_html_affa4f448050134bc5a3c9fe07884c27f"><div class="ttname"><a href="classCommandProcessor.html#affa4f448050134bc5a3c9fe07884c27f">CommandProcessor::unsubscribe</a></div><div class="ttdeci">void unsubscribe(std::shared_ptr&lt; IObserver &gt; observer) override</div><div class="ttdoc">Отписывает наблюдателя от уведомлений</div><div class="ttdef"><b>Definition</b> command_processor.cpp:60</div></div>
+<div class="ttc" id="aclassIObservable_html"><div class="ttname"><a href="classIObservable.html">IObservable</a></div><div class="ttdoc">Интерфейс наблюдаемого объекта</div><div class="ttdef"><b>Definition</b> observer.h:29</div></div>
+<div class="ttc" id="aobserver_8h_html"><div class="ttname"><a href="observer_8h.html">observer.h</a></div></div>
+<div class="ttc" id="athread__pool_8h_html"><div class="ttname"><a href="thread__pool_8h.html">thread_pool.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="command__processor_8h.html">command_processor.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
