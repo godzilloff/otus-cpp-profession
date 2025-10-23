@@ -192,7 +192,7 @@ set(CPACK_PACKAGE_CONTACT "test@gmail.com")
 set(CPACK_DEBIAN_PACKAGE_NAME "bulk_server")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Test User <test@gmail.com>")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libboost-system1.74 (>= 1.74.0)")
-set(CPACK_DEBIAN_FILE_NAME "bulk_server-${PROJECT_VERSION}-${CMAKE_SYSTEM_PROCESSOR}.deb")
+set(CPACK_DEBIAN_FILE_NAME "bulk_server-${PROJECT_VERSION}-Linux.deb")
 
 include(CPack)
 
