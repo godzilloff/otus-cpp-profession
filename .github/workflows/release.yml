@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw9'
+      - 'hw10'
 
 permissions:
   contents: write
@@ -23,10 +23,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             cmake build-essential \
+            libboost-filesystem-dev \
+            libboost-program-options-dev \
+            libboost-iostreams-dev \
+            libboost-system-dev \
+            libgtest-dev \
             doxygen graphviz plantuml
       
       - name: Configure CMake
-        working-directory: ./hw9/async_project
+        working-directory: ./hw10/bulk_server
         run: |
           mkdir -p build
           cd build
@@ -34,19 +39,19 @@ jobs:
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
-        working-directory: ./hw9/async_project/build
+        working-directory: ./hw10/bulk_server/build
         run: cmake --build . --parallel
       
       - name: Package
-        working-directory: ./hw9/async_project/build
+        working-directory: ./hw10/bulk_server/build
         run: cmake --build . --target package --parallel
       
       - name: Create Release
         run: |
-          FILE_PATH="./hw9/async_project/build/async_demo-0.9.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw10/bulk_server/build/bulk_server-0.10.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
-          gh release create "v0.9.${{ github.run_number }}" \
-            --title "Release v0.9.${{ github.run_number }}" \
+          gh release create "v0.10.${{ github.run_number }}" \
+            --title "Release v0.10.${{ github.run_number }}" \
             --draft=false \
             --prerelease=false \
             --notes "" \
@@ -56,7 +61,7 @@ jobs:
 
       - name: Generate Doxygen HTML
         run: |
-          cd hw9/async_project
+          cd hw10/bulk_server
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
@@ -66,6 +71,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw9/async_project/docs/html
-          destination_dir: hw9
+          publish_dir: ./hw10/bulk_server/docs/html
+          destination_dir: hw10
           keep_files: true
