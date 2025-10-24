@@ -43,7 +43,7 @@ jobs:
       
       - name: Create Release
         run: |
-          FILE_PATH="./hw9/async_project/build/async_demo-0.9.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw9/async_project/build/async_user-0.9.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
           gh release create "v0.9.${{ github.run_number }}" \
             --title "Release v0.9.${{ github.run_number }}" \

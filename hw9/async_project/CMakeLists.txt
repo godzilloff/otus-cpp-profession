@@ -33,17 +33,24 @@ endif()
 
 # Исполняемый файл
 add_executable(async_demo 
-    app/main.cpp
+    app/demo/main.cpp
+)
+
+add_executable(async_user
+    app/user/main.cpp
 )
 
 target_link_libraries(async_demo async)
+target_link_libraries(async_user async)
 
 if (MSVC)
     target_compile_options(async PRIVATE /W4)
     target_compile_options(async_demo PRIVATE /W4)
+    target_compile_options(async_user PRIVATE /W4)
 else()
     target_compile_options(async PRIVATE -Wall -Wextra -pedantic -Werror)
     target_compile_options(async_demo PRIVATE -Wall -Wextra -pedantic -Werror)
+    target_compile_options(async_user PRIVATE -Wall -Wextra -pedantic -Werror)
 endif()
 
 if (MSVC)
@@ -57,7 +64,7 @@ set_property(
 endif ()
 
 # Установка
-install(TARGETS async async_demo
+install(TARGETS async async_user
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
@@ -67,9 +74,9 @@ install(DIRECTORY include/ DESTINATION include)
 
 
 set(CPACK_GENERATOR "DEB")
-set(CPACK_PACKAGE_NAME "async_demo")
-set(CPACK_DEBIAN_PACKAGE_NAME "async_demo")
-set(CPACK_DEBIAN_FILE_NAME "async_demo-${PROJECT_VERSION}-Linux.deb")
+set(CPACK_PACKAGE_NAME "async_user")
+set(CPACK_DEBIAN_PACKAGE_NAME "async_user")
+set(CPACK_DEBIAN_FILE_NAME "async_user-${PROJECT_VERSION}-Linux.deb")
 set(CPACK_PACKAGE_VERSION_MAJOR "0")
 set(CPACK_PACKAGE_VERSION_MINOR "9")
 set(CPACK_PACKAGE_VERSION_PATCH "${PATCH_VERSION}")
