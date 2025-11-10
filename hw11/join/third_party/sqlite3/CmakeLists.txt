@@ -1,0 +1,45 @@
+# SQLite3 из исходников
+project(sqlite3_bundled LANGUAGES C)
+
+set(SQLITE3_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(SQLITE3_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# Компилируем SQLite3
+if(BUILD_STATIC_SQLITE)
+    add_library(sqlite3 STATIC ${SQLITE3_SRC_DIR}/sqlite3.c)
+    message(STATUS "Building SQLite3 as static library")
+else()
+    add_library(sqlite3 SHARED ${SQLITE3_SRC_DIR}/sqlite3.c)
+    message(STATUS "Building SQLite3 as shared library")
+endif()
+
+# Настройки компиляции
+target_compile_definitions(sqlite3 PRIVATE
+    SQLITE_THREADSAFE=1
+    SQLITE_USE_URI=1
+    SQLITE_ENABLE_COLUMN_METADATA=1
+)
+
+if(MSVC)
+    target_compile_options(sqlite3 PRIVATE 
+        /W0  # Отключаем предупреждения
+    )
+else()
+    target_compile_options(sqlite3 PRIVATE 
+        -w    # Отключаем предупреждения
+        -O2   # Оптимизация
+        -fPIC # Position Independent Code
+    )
+endif()
+
+# Публичный интерфейс
+target_include_directories(sqlite3 PUBLIC 
+    ${SQLITE3_INCLUDE_DIR}
+)
+
+# Установить выходную директорию
+set_target_properties(sqlite3 PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
