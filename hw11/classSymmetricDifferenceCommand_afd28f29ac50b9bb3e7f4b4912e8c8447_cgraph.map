@@ -1,0 +1,16 @@
+<map id="SymmetricDifferenceCommand::execute" name="SymmetricDifferenceCommand::execute">
+<area shape="rect" id="Node000001" title="Выполняет команду SYMMETRIC_DIFFERENCE." alt="" coords="5,42,232,82"/>
+<area shape="rect" id="Node000002" href="$classResultParser.html#a59b670dea644529d41a986d624bb1e33" title="Разбор ответа на команду SYMMETRIC_DIFFERENCE." alt="" coords="280,10,451,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,45,266,40,267,45,232,50"/>
+<area shape="rect" id="Node000003" href="$classNetworkClient.html#ac7f444c0914e60d40f449fe75107b4d9" title="Отправка команды на сервер" alt="" coords="288,74,443,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,74,275,80,274,85,232,79"/>
+<area shape="rect" id="Node000004" href="$classNetworkClient.html#aa4c59e2d8d1d3b8fac8c703c22fbdf15" title="Гарантирует наличие активного соединения" alt="" coords="499,45,665,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="442,81,485,75,485,80,443,86"/>
+<area shape="rect" id="Node000007" href="$classNetworkClient.html#a966002a50412fa18fd7a6053aaab8e5b" title="Проверка состояния соединения" alt="" coords="713,105,921,131"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="443,95,700,109,699,114,443,101"/>
+<area shape="rect" id="Node000005" href="$classNetworkClient.html#a93e26e74286cfe3dc64f3729a9cfbc65" title="Установка соединения с сервером" alt="" coords="730,5,905,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="665,46,738,31,740,36,666,51"/>
+<area shape="rect" id="Node000006" href="$classNetworkClient.html#a7f69f5c30fd349d670fae18598737b86" title="Закрытие соединения с сервером" alt="" coords="721,55,914,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="665,63,707,63,707,69,665,68"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="666,81,748,100,747,105,665,86"/>
+</map>

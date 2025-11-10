@@ -1,0 +1,21 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/network/command_handler.cpp" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/network/command_handler.cpp">
+<area shape="rect" id="Node000001" title="Реализация класса CommandHandler для обработки команд сервера" alt="" coords="101,5,376,75"/>
+<area shape="rect" id="Node000002" href="$command__handler_8h.html" title=" " alt="" coords="91,123,245,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,76,187,113,183,110,211,73"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="269,123,349,148"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="266,73,294,110,290,113,262,76"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,357,83,383"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,150,100,169,84,182,70,197,53,234,44,273,42,312,43,343,38,344,37,311,39,273,48,232,66,195,80,178,97,165,133,146"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="276,357,335,383"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="198,146,235,165,270,194,287,216,296,235,308,284,311,315,311,343,305,343,306,315,303,284,291,237,282,219,266,198,232,170,196,150"/>
+<area shape="rect" id="Node000005" href="$command__factory_8h.html" title=" " alt="" coords="81,196,255,236"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="171,148,171,182,165,182,165,148"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="129,238,98,259,71,286,57,315,49,344,44,343,52,313,67,282,95,254,127,234"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="218,234,252,254,282,282,298,312,305,343,300,344,293,314,278,286,249,258,215,239"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="82,284,145,309"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="157,238,131,274,127,271,153,235"/>
+<area shape="rect" id="Node000007" href="$server_2commands_2command_8h.html" title="Заголовочный файл, содержащий интерфейс и реализации команд для работы с сервером множеств" alt="" coords="169,284,268,309"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="183,235,206,271,201,274,178,238"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="192,312,86,354,84,350,190,307"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="234,307,282,346,279,351,231,311"/>
+</map>

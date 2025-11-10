@@ -1,0 +1,6 @@
+<map id="IntersectionCommand" name="IntersectionCommand">
+<area shape="rect" id="Node000001" title="Команда INTERSECTION для получения пересечения множеств" alt="" coords="5,199,188,344"/>
+<area shape="rect" id="Node000002" href="$classICommand.html" title="Базовый интерфейс для всех команд" alt="" coords="36,5,157,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,164,91,198,85,198,85,164"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="108,164,108,198,103,198,103,164"/>
+</map>

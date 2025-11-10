@@ -1,0 +1,18 @@
+<map id="InsertCommand::execute" name="InsertCommand::execute">
+<area shape="rect" id="Node000001" title="Выполняет команду INSERT." alt="" coords="5,77,191,102"/>
+<area shape="rect" id="Node000002" href="$classResultParser.html#a1ff664d1303e28c29b0c9fb2a259801c" title="Извлечение сообщения об ошибке из ответа" alt="" coords="243,5,389,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,74,233,47,235,52,143,79"/>
+<area shape="rect" id="Node000003" href="$classResultParser.html#a23707b4002080177db98b6e150f58309" title="Проверка простого успешного ответа" alt="" coords="243,69,389,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,87,229,87,229,92,191,92"/>
+<area shape="rect" id="Node000004" href="$classNetworkClient.html#ac7f444c0914e60d40f449fe75107b4d9" title="Отправка команды на сервер" alt="" coords="239,133,393,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,100,235,127,233,132,142,105"/>
+<area shape="rect" id="Node000005" href="$classNetworkClient.html#aa4c59e2d8d1d3b8fac8c703c22fbdf15" title="Гарантирует наличие активного соединения" alt="" coords="441,104,608,144"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="393,140,427,135,428,140,394,145"/>
+<area shape="rect" id="Node000008" href="$classNetworkClient.html#a966002a50412fa18fd7a6053aaab8e5b" title="Проверка состояния соединения" alt="" coords="656,165,864,190"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="394,155,643,168,642,174,394,160"/>
+<area shape="rect" id="Node000006" href="$classNetworkClient.html#a93e26e74286cfe3dc64f3729a9cfbc65" title="Установка соединения с сервером" alt="" coords="673,65,847,90"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="608,105,681,90,682,95,609,110"/>
+<area shape="rect" id="Node000007" href="$classNetworkClient.html#a7f69f5c30fd349d670fae18598737b86" title="Закрытие соединения с сервером" alt="" coords="663,114,857,139"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="608,122,650,123,650,128,608,128"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="609,140,691,159,690,164,607,145"/>
+</map>

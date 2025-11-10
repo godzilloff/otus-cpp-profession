@@ -1,0 +1,22 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/network/session.h" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/network/session.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="150,5,341,75"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,123,144,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,77,118,118,115,113,186,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="283,357,360,383"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="297,73,319,95,337,121,356,171,362,213,358,257,348,310,336,346,331,344,343,309,353,256,357,214,351,173,332,124,315,98,293,77"/>
+<area shape="rect" id="Node000004" href="$command__handler_8h.html" title=" " alt="" coords="168,123,323,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="248,75,248,109,243,109,243,75"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="266,146,291,166,312,195,325,234,330,275,328,344,322,344,325,275,320,235,307,197,287,170,262,150"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,357,64,383"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="207,151,159,170,111,198,69,236,56,256,44,285,37,315,36,344,30,344,32,314,39,283,52,254,65,232,108,194,156,165,205,146"/>
+<area shape="rect" id="Node000006" href="$command__factory_8h.html" title=" " alt="" coords="122,196,297,236"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="242,149,226,185,221,182,238,147"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="231,234,273,282,311,344,307,347,269,286,227,238"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="137,238,97,258,62,286,46,314,39,344,34,342,41,312,58,282,94,253,135,234"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="73,284,135,309"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="185,238,132,278,129,273,182,234"/>
+<area shape="rect" id="Node000008" href="$server_2commands_2command_8h.html" title="Заголовочный файл, содержащий интерфейс и реализации команд для работы с сервером множеств" alt="" coords="160,284,259,309"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="212,236,212,270,207,270,207,236"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="229,307,293,347,290,352,226,312"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="182,312,77,354,75,350,180,307"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/client/network/client.h" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/client/network/client.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="283,5,474,75"/>
+<area shape="rect" id="Node000002" href="$client_2commands_2command_8h.html" title=" " alt="" coords="155,123,373,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="337,87,299,124,296,121,333,83"/>
+<area shape="rect" id="Node000006" href="$client_8cpp.html" title="Реализация сетевого клиента для взаимодействия с сервером операций над множествами" alt="" coords="398,123,589,192"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="424,83,462,121,458,124,420,87"/>
+<area shape="rect" id="Node000003" href="$client_2commands_2command_8cpp.html" title="Реализация классов команд для клиента операций над множествами" alt="" coords="5,240,240,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,203,166,242,163,238,210,199"/>
+<area shape="rect" id="Node000004" href="$command__executor_8h.html" title=" " alt="" coords="265,240,546,309"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="318,199,365,238,362,242,314,203"/>
+<area shape="rect" id="Node000005" href="$command__executor_8cpp.html" title="Реализация класса CommandExecutor для выполнения команд клиента" alt="" coords="257,357,553,427"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="408,323,408,357,403,357,403,323"/>
+</map>

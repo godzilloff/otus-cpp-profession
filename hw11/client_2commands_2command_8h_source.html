@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Outer join: Исходный файл /home/runner/work/otus-cpp-profession/otus-cpp-profession/hw11/join/app/client/commands/command.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Outer join
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение СУБД</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('client_2commands_2command_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">command.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="client_2commands_2command_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../network/client.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../data/table_data.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="classICommand.html">ICommand</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classICommand.html#aa8a6346c5a0dcfe7fd49413a69e854ef">   15</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classICommand.html#aa8a6346c5a0dcfe7fd49413a69e854ef">~ICommand</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classICommand.html#aaad10c9a3108690a5f0240501ca6ff5a">   22</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classICommand.html#aaad10c9a3108690a5f0240501ca6ff5a">execute</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; client) = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classICommand.html#a21061280244e5225d2427e6b421d0d24">   28</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classICommand.html#a21061280244e5225d2427e6b421d0d24">get_name</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span><a class="code hl_class" href="classInsertCommand.html">InsertCommand</a> : <span class="keyword">public</span> <a class="code hl_class" href="classICommand.html">ICommand</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classInsertCommand.html">InsertCommand</a>(<span class="keyword">const</span> std::string&amp; table, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classInsertCommand.html#a3ac7ab4801a2bfab407ca84bc90826f6">execute</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; client) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::string <a class="code hl_function" href="classInsertCommand.html#a81ec6e41a261198553a66fdbaf5ca6f6">get_name</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::string table_;  </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">int</span> id_;             </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::string name_;   </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">class </span><a class="code hl_class" href="classTruncateCommand.html">TruncateCommand</a> : <span class="keyword">public</span> <a class="code hl_class" href="classICommand.html">ICommand</a> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classTruncateCommand.html">TruncateCommand</a>(<span class="keyword">const</span> std::string&amp; table);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTruncateCommand.html#abbc886636b8a2ad02f41d4fd27d61b06">execute</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; client) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::string <a class="code hl_function" href="classTruncateCommand.html#a28b3c80a47d82bd8ab2905896d84aaaf">get_name</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::string table_;  </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">class </span><a class="code hl_class" href="classIntersectionCommand.html">IntersectionCommand</a> : <span class="keyword">public</span> <a class="code hl_class" href="classICommand.html">ICommand</a> {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classIntersectionCommand.html#a73fd88417843ebfa8dd48363df796453">  108</a></span>    <a class="code hl_function" href="classIntersectionCommand.html#a73fd88417843ebfa8dd48363df796453">IntersectionCommand</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classIntersectionCommand.html#a03a12b234617183a8a9d7a13187d1264">execute</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; client) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    std::string <a class="code hl_function" href="classIntersectionCommand.html#a5c8101012e4214a76af6b5729bae99c0">get_name</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">class </span><a class="code hl_class" href="classSymmetricDifferenceCommand.html">SymmetricDifferenceCommand</a> : <span class="keyword">public</span> <a class="code hl_class" href="classICommand.html">ICommand</a> {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classSymmetricDifferenceCommand.html#a02a45d7030d6be599568316c9736bc44">  141</a></span>    <a class="code hl_function" href="classSymmetricDifferenceCommand.html#a02a45d7030d6be599568316c9736bc44">SymmetricDifferenceCommand</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSymmetricDifferenceCommand.html#ab727290ed14b6e7733d3a213721ff820">execute</a>(<a class="code hl_class" href="classNetworkClient.html">NetworkClient</a>&amp; client) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    std::string <a class="code hl_function" href="classSymmetricDifferenceCommand.html#a4f70092d009e4449311b1f6e260c112c">get_name</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>};</div>
+<div class="ttc" id="aclassICommand_html"><div class="ttname"><a href="classICommand.html">ICommand</a></div><div class="ttdoc">Базовый интерфейс для всех команд</div><div class="ttdef"><b>Definition</b> command.h:16</div></div>
+<div class="ttc" id="aclassICommand_html_a21061280244e5225d2427e6b421d0d24"><div class="ttname"><a href="classICommand.html#a21061280244e5225d2427e6b421d0d24">ICommand::get_name</a></div><div class="ttdeci">virtual std::string get_name() const =0</div><div class="ttdoc">Возвращает имя команды</div></div>
+<div class="ttc" id="aclassICommand_html_aa8a6346c5a0dcfe7fd49413a69e854ef"><div class="ttname"><a href="classICommand.html#aa8a6346c5a0dcfe7fd49413a69e854ef">ICommand::~ICommand</a></div><div class="ttdeci">virtual ~ICommand()=default</div></div>
+<div class="ttc" id="aclassICommand_html_aaad10c9a3108690a5f0240501ca6ff5a"><div class="ttname"><a href="classICommand.html#aaad10c9a3108690a5f0240501ca6ff5a">ICommand::execute</a></div><div class="ttdeci">virtual bool execute(NetworkClient &amp;client)=0</div><div class="ttdoc">Выполняет команду через сетевого клиента</div></div>
+<div class="ttc" id="aclassInsertCommand_html"><div class="ttname"><a href="classInsertCommand.html">InsertCommand</a></div><div class="ttdoc">Команда INSERT для добавления данных в таблицу</div><div class="ttdef"><b>Definition</b> command.h:35</div></div>
+<div class="ttc" id="aclassInsertCommand_html_a3ac7ab4801a2bfab407ca84bc90826f6"><div class="ttname"><a href="classInsertCommand.html#a3ac7ab4801a2bfab407ca84bc90826f6">InsertCommand::execute</a></div><div class="ttdeci">std::string execute() override</div><div class="ttdoc">Выполняет команду INSERT - вставка данных в таблицу</div><div class="ttdef"><b>Definition</b> command.cpp:16</div></div>
+<div class="ttc" id="aclassInsertCommand_html_a81ec6e41a261198553a66fdbaf5ca6f6"><div class="ttname"><a href="classInsertCommand.html#a81ec6e41a261198553a66fdbaf5ca6f6">InsertCommand::get_name</a></div><div class="ttdeci">std::string get_name() const override</div><div class="ttdoc">Возвращает имя команды</div><div class="ttdef"><b>Definition</b> command.cpp:50</div></div>
+<div class="ttc" id="aclassIntersectionCommand_html"><div class="ttname"><a href="classIntersectionCommand.html">IntersectionCommand</a></div><div class="ttdoc">Команда INTERSECTION для получения пересечения множеств</div><div class="ttdef"><b>Definition</b> command.h:89</div></div>
+<div class="ttc" id="aclassIntersectionCommand_html_a03a12b234617183a8a9d7a13187d1264"><div class="ttname"><a href="classIntersectionCommand.html#a03a12b234617183a8a9d7a13187d1264">IntersectionCommand::execute</a></div><div class="ttdeci">std::string execute() override</div><div class="ttdoc">Выполняет команду INTERSECTION - пересечение множеств</div><div class="ttdef"><b>Definition</b> command.cpp:43</div></div>
+<div class="ttc" id="aclassIntersectionCommand_html_a5c8101012e4214a76af6b5729bae99c0"><div class="ttname"><a href="classIntersectionCommand.html#a5c8101012e4214a76af6b5729bae99c0">IntersectionCommand::get_name</a></div><div class="ttdeci">std::string get_name() const override</div><div class="ttdoc">Возвращает имя команды</div><div class="ttdef"><b>Definition</b> command.cpp:131</div></div>
+<div class="ttc" id="aclassIntersectionCommand_html_a73fd88417843ebfa8dd48363df796453"><div class="ttname"><a href="classIntersectionCommand.html#a73fd88417843ebfa8dd48363df796453">IntersectionCommand::IntersectionCommand</a></div><div class="ttdeci">IntersectionCommand()=default</div></div>
+<div class="ttc" id="aclassNetworkClient_html"><div class="ttname"><a href="classNetworkClient.html">NetworkClient</a></div><div class="ttdoc">Класс для сетевого взаимодействия с сервером операций над множествами</div><div class="ttdef"><b>Definition</b> client.h:16</div></div>
+<div class="ttc" id="aclassSymmetricDifferenceCommand_html"><div class="ttname"><a href="classSymmetricDifferenceCommand.html">SymmetricDifferenceCommand</a></div><div class="ttdoc">Команда SYMMETRIC_DIFFERENCE для получения симметрической разности</div><div class="ttdef"><b>Definition</b> command.h:114</div></div>
+<div class="ttc" id="aclassSymmetricDifferenceCommand_html_a02a45d7030d6be599568316c9736bc44"><div class="ttname"><a href="classSymmetricDifferenceCommand.html#a02a45d7030d6be599568316c9736bc44">SymmetricDifferenceCommand::SymmetricDifferenceCommand</a></div><div class="ttdeci">SymmetricDifferenceCommand()=default</div></div>
+<div class="ttc" id="aclassSymmetricDifferenceCommand_html_a4f70092d009e4449311b1f6e260c112c"><div class="ttname"><a href="classSymmetricDifferenceCommand.html#a4f70092d009e4449311b1f6e260c112c">SymmetricDifferenceCommand::get_name</a></div><div class="ttdeci">std::string get_name() const override</div><div class="ttdoc">Возвращает имя команды</div><div class="ttdef"><b>Definition</b> command.cpp:177</div></div>
+<div class="ttc" id="aclassSymmetricDifferenceCommand_html_ab727290ed14b6e7733d3a213721ff820"><div class="ttname"><a href="classSymmetricDifferenceCommand.html#ab727290ed14b6e7733d3a213721ff820">SymmetricDifferenceCommand::execute</a></div><div class="ttdeci">std::string execute() override</div><div class="ttdoc">Выполняет команду SYMMETRIC_DIFFERENCE - симметрическая разность множеств</div><div class="ttdef"><b>Definition</b> command.cpp:64</div></div>
+<div class="ttc" id="aclassTruncateCommand_html"><div class="ttname"><a href="classTruncateCommand.html">TruncateCommand</a></div><div class="ttdoc">Команда TRUNCATE для очистки таблицы</div><div class="ttdef"><b>Definition</b> command.h:64</div></div>
+<div class="ttc" id="aclassTruncateCommand_html_a28b3c80a47d82bd8ab2905896d84aaaf"><div class="ttname"><a href="classTruncateCommand.html#a28b3c80a47d82bd8ab2905896d84aaaf">TruncateCommand::get_name</a></div><div class="ttdeci">std::string get_name() const override</div><div class="ttdoc">Возвращает имя команды</div><div class="ttdef"><b>Definition</b> command.cpp:88</div></div>
+<div class="ttc" id="aclassTruncateCommand_html_abbc886636b8a2ad02f41d4fd27d61b06"><div class="ttname"><a href="classTruncateCommand.html#abbc886636b8a2ad02f41d4fd27d61b06">TruncateCommand::execute</a></div><div class="ttdeci">std::string execute() override</div><div class="ttdoc">Выполняет команду TRUNCATE - очистка таблицы</div><div class="ttdef"><b>Definition</b> command.cpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1036706e55c22cab35bc1c58ee689f1d.html">runner</a></li><li class="navelem"><a class="el" href="dir_629f8151d55d307162ff2d619fb1783d.html">work</a></li><li class="navelem"><a class="el" href="dir_3c4633e2ca4a5f0110dea7dc0c6d28a1.html">otus-cpp-profession</a></li><li class="navelem"><a class="el" href="dir_fcda9e9ddc096921cac31711c0c655e9.html">otus-cpp-profession</a></li><li class="navelem"><a class="el" href="dir_b7d175ce5cbbae12d05d4f15d015cda0.html">hw11</a></li><li class="navelem"><a class="el" href="dir_3df8b0aa97d333bba9bc0a46a814f75e.html">join</a></li><li class="navelem"><a class="el" href="dir_221acce7a993f091375935695a4e35ec.html">app</a></li><li class="navelem"><a class="el" href="dir_45a28ef6cdbd308dbca8020e485c0d86.html">client</a></li><li class="navelem"><a class="el" href="dir_0b8d7ebb7fac22a68acbaeeffd79a7f8.html">commands</a></li><li class="navelem"><a class="el" href="client_2commands_2command_8h.html">command.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

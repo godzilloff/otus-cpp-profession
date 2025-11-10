@@ -1,0 +1,5 @@
+<map id="ResultParser::parse_intersection" name="ResultParser::parse_intersection">
+<area shape="rect" id="Node000001" title="Разбор ответа на команду INTERSECTION." alt="" coords="220,5,367,45"/>
+<area shape="rect" id="Node000002" href="$classIntersectionCommand.html#a1ee08779f32ea099218dc973e6d1a0b7" title="Выполняет команду INTERSECTION." alt="" coords="5,5,172,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,28,172,28,172,23,206,23"/>
+</map>

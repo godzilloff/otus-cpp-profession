@@ -1,0 +1,12 @@
+<map id="TableData" name="TableData">
+<area shape="rect" id="Node000001" title="Структура, представляющая всю таблицу с данными" alt="" coords="31,519,110,584"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,135,110,200"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,201,73,502,68,502,68,201"/>
+<area shape="rect" id="Node000005" href="$structTableRow.html" title="Структура, представляющая строку таблицы с идентификатором и именем" alt="" coords="105,263,207,328"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="94,199,127,247,123,250,90,202"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,136,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,99,73,134,68,134,68,99"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="87,391,262,456"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,458,109,507,105,504,146,455"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="163,328,170,374,165,375,158,329"/>
+</map>

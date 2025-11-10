@@ -1,0 +1,17 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/database/repository.h" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/database/repository.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл репозитория для операций с таблицами базы данных" alt="" coords="409,5,619,75"/>
+<area shape="rect" id="Node000002" href="$server_2commands_2command_8h.html" title="Заголовочный файл, содержащий интерфейс и реализации команд для работы с сервером множеств" alt="" coords="153,123,377,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,83,339,125,336,120,428,78"/>
+<area shape="rect" id="Node000013" href="$repository_8cpp.html" title="Реализация репозитория для работы с таблицами базы данных" alt="" coords="401,123,627,192"/>
+<area shape="poly" id="edge6_Node000001_Node000013" title=" " alt="" coords="517,89,517,122,511,122,511,89"/>
+<area shape="rect" id="Node000009" href="$server_8h.html" title=" " alt="" coords="652,123,843,192"/>
+<area shape="poly" id="edge7_Node000001_Node000009" title=" " alt="" coords="595,78,680,120,678,125,593,83"/>
+<area shape="rect" id="Node000003" href="$server_2commands_2command_8cpp.html" title="Реализация классов команд для сервера операций над множествами" alt="" coords="5,240,244,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,203,168,242,164,238,212,199"/>
+<area shape="rect" id="Node000004" href="$command__factory_8h.html" title=" " alt="" coords="269,240,543,309"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="318,199,366,238,363,242,315,203"/>
+<area shape="rect" id="Node000005" href="$command__factory_8cpp.html" title="Реализация фабрики команд для обработки запросов к серверу множеств" alt="" coords="110,357,401,427"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="353,320,301,359,298,355,350,316"/>
+<area shape="rect" id="Node000006" href="$command__handler_8h.html" title=" " alt="" coords="425,357,685,427"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="462,316,513,355,510,359,459,320"/>
+</map>

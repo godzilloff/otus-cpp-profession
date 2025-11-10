@@ -1,0 +1,16 @@
+<map id="NetworkClient::is_connected" name="NetworkClient::is_connected">
+<area shape="rect" id="Node000001" title="Проверка состояния соединения" alt="" coords="697,84,905,109"/>
+<area shape="rect" id="Node000002" href="$classNetworkClient.html#aa4c59e2d8d1d3b8fac8c703c22fbdf15" title="Гарантирует наличие активного соединения" alt="" coords="483,47,649,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="686,85,649,80,650,75,686,80"/>
+<area shape="rect" id="Node000003" href="$classNetworkClient.html#ac7f444c0914e60d40f449fe75107b4d9" title="Отправка команды на сервер" alt="" coords="280,77,435,117"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="684,102,649,102,483,102,435,101,435,96,483,97,649,97,684,96"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="470,84,435,88,435,83,469,78"/>
+<area shape="rect" id="Node000004" href="$classInsertCommand.html#a6c4b77fb45eecfdfaaa7205af1a8bbc5" title="Выполняет команду INSERT." alt="" coords="26,5,211,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="303,73,231,45,189,33,191,28,233,39,305,68"/>
+<area shape="rect" id="Node000005" href="$classTruncateCommand.html#ab658d1bed4cac28acb6c979d911441e6" title="Выполняет команду TRUNCATE." alt="" coords="17,55,220,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="266,88,220,82,221,77,266,83"/>
+<area shape="rect" id="Node000006" href="$classIntersectionCommand.html#a1ee08779f32ea099218dc973e6d1a0b7" title="Выполняет команду INTERSECTION." alt="" coords="35,105,202,145"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="266,110,203,118,202,112,266,105"/>
+<area shape="rect" id="Node000007" href="$classSymmetricDifferenceCommand.html#afd28f29ac50b9bb3e7f4b4912e8c8447" title="Выполняет команду SYMMETRIC_DIFFERENCE." alt="" coords="5,169,232,209"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="308,125,233,159,198,171,196,166,231,154,306,120"/>
+</map>

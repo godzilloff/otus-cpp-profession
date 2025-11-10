@@ -1,0 +1,7 @@
+<map id="ResultParser::parse_simple_response" name="ResultParser::parse_simple_response">
+<area shape="rect" id="Node000001" title="Проверка простого успешного ответа" alt="" coords="256,23,403,63"/>
+<area shape="rect" id="Node000002" href="$classInsertCommand.html#a6c4b77fb45eecfdfaaa7205af1a8bbc5" title="Выполняет команду INSERT." alt="" coords="14,5,199,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,36,199,31,200,26,243,31"/>
+<area shape="rect" id="Node000003" href="$classTruncateCommand.html#ab658d1bed4cac28acb6c979d911441e6" title="Выполняет команду TRUNCATE." alt="" coords="5,55,208,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,55,208,59,208,54,242,50"/>
+</map>

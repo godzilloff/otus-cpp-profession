@@ -1,0 +1,16 @@
+<map id="IntersectionCommand::execute" name="IntersectionCommand::execute">
+<area shape="rect" id="Node000001" title="Выполняет команду INTERSECTION." alt="" coords="5,42,172,82"/>
+<area shape="rect" id="Node000002" href="$classResultParser.html#ac3915e5d23e143fc6e9158850b8f9bb5" title="Разбор ответа на команду INTERSECTION." alt="" coords="224,10,371,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,47,210,41,211,46,172,52"/>
+<area shape="rect" id="Node000003" href="$classNetworkClient.html#ac7f444c0914e60d40f449fe75107b4d9" title="Отправка команды на сервер" alt="" coords="220,74,375,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,72,207,77,206,83,172,77"/>
+<area shape="rect" id="Node000004" href="$classNetworkClient.html#aa4c59e2d8d1d3b8fac8c703c22fbdf15" title="Гарантирует наличие активного соединения" alt="" coords="423,45,589,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="374,81,409,76,410,81,375,86"/>
+<area shape="rect" id="Node000007" href="$classNetworkClient.html#a966002a50412fa18fd7a6053aaab8e5b" title="Проверка состояния соединения" alt="" coords="637,105,845,131"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="375,95,624,109,624,114,375,101"/>
+<area shape="rect" id="Node000005" href="$classNetworkClient.html#a93e26e74286cfe3dc64f3729a9cfbc65" title="Установка соединения с сервером" alt="" coords="654,5,829,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="589,46,662,31,664,36,590,51"/>
+<area shape="rect" id="Node000006" href="$classNetworkClient.html#a7f69f5c30fd349d670fae18598737b86" title="Закрытие соединения с сервером" alt="" coords="645,55,838,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="589,63,631,63,631,69,589,68"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="590,81,672,100,671,105,589,86"/>
+</map>

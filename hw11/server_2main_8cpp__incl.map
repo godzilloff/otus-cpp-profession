@@ -1,0 +1,33 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/main.cpp" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/main.cpp">
+<area shape="rect" id="Node000001" title="Главный файл сервера операций над множествами" alt="" coords="27,5,218,75"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,123,85,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,76,66,114,62,110,93,73"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="185,343,263,368"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,74,219,329,214,330,131,76"/>
+<area shape="rect" id="Node000004" href="$server_8h.html" title=" " alt="" coords="331,123,461,148"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,71,350,116,349,121,217,76"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="370,150,336,168,296,195,260,229,245,249,233,270,226,300,225,329,219,329,220,299,228,268,240,246,256,225,293,190,333,164,368,146"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="440,269,557,295"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="407,147,485,257,480,260,402,150"/>
+<area shape="rect" id="Node000006" href="$database_8h.html" title=" " alt="" coords="581,269,752,295"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="419,146,634,260,632,265,416,151"/>
+<area shape="rect" id="Node000009" href="$repository_8h.html" title="Заголовочный файл репозитория для операций с таблицами базы данных" alt="" coords="610,196,785,221"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="445,145,636,190,635,195,444,151"/>
+<area shape="rect" id="Node000011" href="$session_8h.html" title=" " alt="" coords="307,196,389,221"/>
+<area shape="poly" id="edge14_Node000004_Node000011" title=" " alt="" coords="390,150,366,186,361,183,386,147"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="596,297,277,348,276,343,595,292"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="581,343,659,368"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="661,296,637,333,633,330,657,294"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="684,343,743,368"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="677,294,700,330,696,333,672,296"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="695,223,679,258,675,256,690,221"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="777,219,819,237,837,250,853,268,859,283,857,297,848,310,834,320,797,337,757,348,755,343,795,332,831,316,844,306,852,295,854,284,848,271,834,254,816,241,775,224"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="777,269,839,295"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="717,219,780,259,777,264,714,224"/>
+<area shape="poly" id="edge16_Node000011_Node000003" title=" " alt="" coords="318,224,283,243,251,271,237,300,229,330,224,328,232,298,247,268,280,238,316,219"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="373,219,463,261,460,266,371,224"/>
+<area shape="rect" id="Node000012" href="$command__handler_8h.html" title=" " alt="" coords="261,269,416,295"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="349,222,345,256,339,255,344,221"/>
+<area shape="poly" id="edge18_Node000012_Node000003" title=" " alt="" coords="322,297,256,338,253,333,319,292"/>
+<area shape="poly" id="edge19_Node000012_Node000008" title=" " alt="" coords="413,292,530,312,671,340,670,345,529,317,412,297"/>
+</map>

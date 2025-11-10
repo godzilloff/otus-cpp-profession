@@ -1,0 +1,15 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/commands/command_factory.h" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/commands/command_factory.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="163,5,437,75"/>
+<area shape="rect" id="Node000002" href="$command__factory_8cpp.html" title="Реализация фабрики команд для обработки запросов к серверу множеств" alt="" coords="5,123,296,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,85,196,124,193,120,244,81"/>
+<area shape="rect" id="Node000003" href="$command__handler_8h.html" title=" " alt="" coords="321,123,581,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,81,408,120,405,124,353,85"/>
+<area shape="rect" id="Node000004" href="$command__handler_8cpp.html" title="Реализация класса CommandHandler для обработки команд сервера" alt="" coords="184,240,459,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="405,203,361,242,358,238,401,199"/>
+<area shape="rect" id="Node000005" href="$session_8h.html" title=" " alt="" coords="483,240,674,309"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="500,199,543,238,539,242,496,203"/>
+<area shape="rect" id="Node000006" href="$server_8h.html" title=" " alt="" coords="373,357,563,427"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="539,321,502,359,498,355,535,318"/>
+<area shape="rect" id="Node000009" href="$session_8cpp.html" title="Реализация класса Session для обработки клиентских соединений" alt="" coords="587,357,791,427"/>
+<area shape="poly" id="edge6_Node000005_Node000009" title=" " alt="" coords="623,318,659,355,655,359,619,321"/>
+</map>

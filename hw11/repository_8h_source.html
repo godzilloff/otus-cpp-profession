@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Outer join: Исходный файл /home/runner/work/otus-cpp-profession/otus-cpp-profession/hw11/join/app/server/database/repository.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Outer join
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение СУБД</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('repository_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">repository.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="repository_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="database_8h.html">database.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structResultRow.html">   14</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structResultRow.html">ResultRow</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structResultRow.html#a9a073eaf20dd737fe86e94a0cd5fe38e">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structResultRow.html#a9a073eaf20dd737fe86e94a0cd5fe38e">id</a>;             </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structResultRow.html#ac488556cf2d1420f1f60ca74f712bf68">   16</a></span>    std::string <a class="code hl_variable" href="structResultRow.html#ac488556cf2d1420f1f60ca74f712bf68">a</a>;      </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structResultRow.html#a19210492ed65ee595a41e7ccd3c4815d">   17</a></span>    std::string <a class="code hl_variable" href="structResultRow.html#a19210492ed65ee595a41e7ccd3c4815d">b</a>;      </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classITableRepository.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classITableRepository.html">ITableRepository</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classITableRepository.html#a396ce62db829982d005d78cf3473ce8b">   25</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classITableRepository.html#a396ce62db829982d005d78cf3473ce8b">~ITableRepository</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classITableRepository.html#ae5997724b3e7a851fda55f72a6734c9d">   34</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classITableRepository.html#ae5997724b3e7a851fda55f72a6734c9d">insert</a>(<span class="keyword">const</span> std::string&amp; table, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string&amp; name) = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classITableRepository.html#a96805a58053b78f35324c810d66da353">   41</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classITableRepository.html#a96805a58053b78f35324c810d66da353">truncate</a>(<span class="keyword">const</span> std::string&amp; table) = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classITableRepository.html#a5075323f9806a7b2189e43d24742c3c4">   47</a></span>    <span class="keyword">virtual</span> std::vector&lt;ResultRow&gt; <a class="code hl_function" href="classITableRepository.html#a5075323f9806a7b2189e43d24742c3c4">intersection</a>() = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classITableRepository.html#a0b06c4af2f9a2ea40ed41a4797adb291">   53</a></span>    <span class="keyword">virtual</span> std::vector&lt;ResultRow&gt; <a class="code hl_function" href="classITableRepository.html#a0b06c4af2f9a2ea40ed41a4797adb291">symmetric_difference</a>() = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classTableRepository.html">   62</a></span><span class="keyword">class </span><a class="code hl_class" href="classTableRepository.html">TableRepository</a> : <span class="keyword">public</span> <a class="code hl_class" href="classITableRepository.html">ITableRepository</a> {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classTableRepository.html">TableRepository</a>(std::shared_ptr&lt;Database&gt; db);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTableRepository.html#abc219ec9910d30fb9c82480f638826cc">insert</a>(<span class="keyword">const</span> std::string&amp; table, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string&amp; name) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classTableRepository.html#a398433013560672ed8230b11d22f2170">truncate</a>(<span class="keyword">const</span> std::string&amp; table) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::vector&lt;ResultRow&gt; <a class="code hl_function" href="classTableRepository.html#ad1d9fdfa253be1fbd57cac8063a3b562">intersection</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::vector&lt;ResultRow&gt; <a class="code hl_function" href="classTableRepository.html#ac8e541f342b07881ea7211b179ff7748">symmetric_difference</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::vector&lt;ResultRow&gt; execute_join_query(<span class="keyword">const</span> std::string&amp; sql);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::shared_ptr&lt;Database&gt; db_;  </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+</div>
+<div class="ttc" id="aclassITableRepository_html"><div class="ttname"><a href="classITableRepository.html">ITableRepository</a></div><div class="ttdoc">Интерфейс репозитория для операций с таблицами A и B.</div><div class="ttdef"><b>Definition</b> repository.h:23</div></div>
+<div class="ttc" id="aclassITableRepository_html_a0b06c4af2f9a2ea40ed41a4797adb291"><div class="ttname"><a href="classITableRepository.html#a0b06c4af2f9a2ea40ed41a4797adb291">ITableRepository::symmetric_difference</a></div><div class="ttdeci">virtual std::vector&lt; ResultRow &gt; symmetric_difference()=0</div><div class="ttdoc">Операция симметрической разности таблиц A и B.</div></div>
+<div class="ttc" id="aclassITableRepository_html_a396ce62db829982d005d78cf3473ce8b"><div class="ttname"><a href="classITableRepository.html#a396ce62db829982d005d78cf3473ce8b">ITableRepository::~ITableRepository</a></div><div class="ttdeci">virtual ~ITableRepository()=default</div></div>
+<div class="ttc" id="aclassITableRepository_html_a5075323f9806a7b2189e43d24742c3c4"><div class="ttname"><a href="classITableRepository.html#a5075323f9806a7b2189e43d24742c3c4">ITableRepository::intersection</a></div><div class="ttdeci">virtual std::vector&lt; ResultRow &gt; intersection()=0</div><div class="ttdoc">Операция пересечения таблиц A и B.</div></div>
+<div class="ttc" id="aclassITableRepository_html_a96805a58053b78f35324c810d66da353"><div class="ttname"><a href="classITableRepository.html#a96805a58053b78f35324c810d66da353">ITableRepository::truncate</a></div><div class="ttdeci">virtual bool truncate(const std::string &amp;table)=0</div><div class="ttdoc">Очистка указанной таблицы</div></div>
+<div class="ttc" id="aclassITableRepository_html_ae5997724b3e7a851fda55f72a6734c9d"><div class="ttname"><a href="classITableRepository.html#ae5997724b3e7a851fda55f72a6734c9d">ITableRepository::insert</a></div><div class="ttdeci">virtual bool insert(const std::string &amp;table, int id, const std::string &amp;name)=0</div><div class="ttdoc">Вставка записи в указанную таблицу</div></div>
+<div class="ttc" id="aclassTableRepository_html"><div class="ttname"><a href="classTableRepository.html">TableRepository</a></div><div class="ttdoc">Реализация репозитория для работы с таблицами базы данных</div><div class="ttdef"><b>Definition</b> repository.h:62</div></div>
+<div class="ttc" id="aclassTableRepository_html_a398433013560672ed8230b11d22f2170"><div class="ttname"><a href="classTableRepository.html#a398433013560672ed8230b11d22f2170">TableRepository::truncate</a></div><div class="ttdeci">bool truncate(const std::string &amp;table) override</div><div class="ttdoc">Очистка указанной таблицы (удаление всех записей)</div><div class="ttdef"><b>Definition</b> repository.cpp:60</div></div>
+<div class="ttc" id="aclassTableRepository_html_abc219ec9910d30fb9c82480f638826cc"><div class="ttname"><a href="classTableRepository.html#abc219ec9910d30fb9c82480f638826cc">TableRepository::insert</a></div><div class="ttdeci">bool insert(const std::string &amp;table, int id, const std::string &amp;name) override</div><div class="ttdoc">Вставка новой записи в указанную таблицу</div><div class="ttdef"><b>Definition</b> repository.cpp:25</div></div>
+<div class="ttc" id="aclassTableRepository_html_ac8e541f342b07881ea7211b179ff7748"><div class="ttname"><a href="classTableRepository.html#ac8e541f342b07881ea7211b179ff7748">TableRepository::symmetric_difference</a></div><div class="ttdeci">std::vector&lt; ResultRow &gt; symmetric_difference() override</div><div class="ttdoc">Выполнение операции симметрической разности таблиц A и B.</div><div class="ttdef"><b>Definition</b> repository.cpp:110</div></div>
+<div class="ttc" id="aclassTableRepository_html_ad1d9fdfa253be1fbd57cac8063a3b562"><div class="ttname"><a href="classTableRepository.html#ad1d9fdfa253be1fbd57cac8063a3b562">TableRepository::intersection</a></div><div class="ttdeci">std::vector&lt; ResultRow &gt; intersection() override</div><div class="ttdoc">Выполнение операции пересечения таблиц A и B.</div><div class="ttdef"><b>Definition</b> repository.cpp:89</div></div>
+<div class="ttc" id="adatabase_8h_html"><div class="ttname"><a href="database_8h.html">database.h</a></div></div>
+<div class="ttc" id="astructResultRow_html"><div class="ttname"><a href="structResultRow.html">ResultRow</a></div><div class="ttdoc">Структура для представления строки результата операций с таблицами</div><div class="ttdef"><b>Definition</b> repository.h:14</div></div>
+<div class="ttc" id="astructResultRow_html_a19210492ed65ee595a41e7ccd3c4815d"><div class="ttname"><a href="structResultRow.html#a19210492ed65ee595a41e7ccd3c4815d">ResultRow::b</a></div><div class="ttdeci">std::string b</div><div class="ttdoc">Значение из таблицы B (может быть пустым)</div><div class="ttdef"><b>Definition</b> repository.h:17</div></div>
+<div class="ttc" id="astructResultRow_html_a9a073eaf20dd737fe86e94a0cd5fe38e"><div class="ttname"><a href="structResultRow.html#a9a073eaf20dd737fe86e94a0cd5fe38e">ResultRow::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Уникальный идентификатор записи</div><div class="ttdef"><b>Definition</b> repository.h:15</div></div>
+<div class="ttc" id="astructResultRow_html_ac488556cf2d1420f1f60ca74f712bf68"><div class="ttname"><a href="structResultRow.html#ac488556cf2d1420f1f60ca74f712bf68">ResultRow::a</a></div><div class="ttdeci">std::string a</div><div class="ttdoc">Значение из таблицы A (может быть пустым)</div><div class="ttdef"><b>Definition</b> repository.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1036706e55c22cab35bc1c58ee689f1d.html">runner</a></li><li class="navelem"><a class="el" href="dir_629f8151d55d307162ff2d619fb1783d.html">work</a></li><li class="navelem"><a class="el" href="dir_3c4633e2ca4a5f0110dea7dc0c6d28a1.html">otus-cpp-profession</a></li><li class="navelem"><a class="el" href="dir_fcda9e9ddc096921cac31711c0c655e9.html">otus-cpp-profession</a></li><li class="navelem"><a class="el" href="dir_b7d175ce5cbbae12d05d4f15d015cda0.html">hw11</a></li><li class="navelem"><a class="el" href="dir_3df8b0aa97d333bba9bc0a46a814f75e.html">join</a></li><li class="navelem"><a class="el" href="dir_221acce7a993f091375935695a4e35ec.html">app</a></li><li class="navelem"><a class="el" href="dir_4622bcda484893fc36e54348231d6c1f.html">server</a></li><li class="navelem"><a class="el" href="dir_dd11690a9a3dcbf9d5e186765c6c7245.html">database</a></li><li class="navelem"><a class="el" href="repository_8h.html">repository.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

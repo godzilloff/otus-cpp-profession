@@ -1,0 +1,9 @@
+<map id="NetworkClient::ensure_connection" name="NetworkClient::ensure_connection">
+<area shape="rect" id="Node000001" title="Гарантирует наличие активного соединения" alt="" coords="5,47,172,87"/>
+<area shape="rect" id="Node000002" href="$classNetworkClient.html#a93e26e74286cfe3dc64f3729a9cfbc65" title="Установка соединения с сервером" alt="" coords="237,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,47,249,31,250,36,173,53"/>
+<area shape="rect" id="Node000003" href="$classNetworkClient.html#a7f69f5c30fd349d670fae18598737b86" title="Закрытие соединения с сервером" alt="" coords="227,55,421,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,65,214,65,214,70,172,70"/>
+<area shape="rect" id="Node000004" href="$classNetworkClient.html#a966002a50412fa18fd7a6053aaab8e5b" title="Проверка состояния соединения" alt="" coords="220,104,428,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,82,250,98,249,104,171,87"/>
+</map>

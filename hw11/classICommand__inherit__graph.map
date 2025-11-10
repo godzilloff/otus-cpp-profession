@@ -1,0 +1,15 @@
+<map id="ICommand" name="ICommand">
+<area shape="rect" id="Node000001" title="Базовый интерфейс для всех команд" alt="" coords="321,5,443,151"/>
+<area shape="rect" id="Node000002" href="$classInsertCommand.html" title="Команда INSERT для добавления данных в таблицу" alt="" coords="5,199,148,344"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,111,231,151,149,200,147,196,228,146,308,106"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="311,121,243,158,173,201,150,218,147,214,170,196,240,153,308,116"/>
+<area shape="rect" id="Node000003" href="$classIntersectionCommand.html" title="Команда INTERSECTION для получения пересечения множеств" alt="" coords="172,199,355,344"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="324,164,302,199,297,197,319,161"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="341,164,319,199,315,197,337,161"/>
+<area shape="rect" id="Node000004" href="$classSymmetricDifferenceCommand.html" title="Команда SYMMETRIC_DIFFERENCE для получения симметрической разности" alt="" coords="379,199,623,344"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="427,161,449,197,445,199,423,164"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="445,161,467,197,462,199,440,164"/>
+<area shape="rect" id="Node000005" href="$classTruncateCommand.html" title="Команда TRUNCATE для очистки таблицы" alt="" coords="647,199,808,344"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="457,111,539,149,625,196,648,212,645,216,622,201,536,154,455,116"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="457,102,550,143,648,196,646,201,547,148,454,107"/>
+</map>

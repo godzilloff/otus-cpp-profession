@@ -1,0 +1,18 @@
+<map id="TruncateCommand::execute" name="TruncateCommand::execute">
+<area shape="rect" id="Node000001" title="Выполняет команду TRUNCATE." alt="" coords="5,77,208,102"/>
+<area shape="rect" id="Node000002" href="$classResultParser.html#a1ff664d1303e28c29b0c9fb2a259801c" title="Извлечение сообщения об ошибке из ответа" alt="" coords="260,5,407,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,74,248,47,249,52,154,79"/>
+<area shape="rect" id="Node000003" href="$classResultParser.html#a23707b4002080177db98b6e150f58309" title="Проверка простого успешного ответа" alt="" coords="260,69,407,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,87,246,87,246,92,208,92"/>
+<area shape="rect" id="Node000004" href="$classNetworkClient.html#ac7f444c0914e60d40f449fe75107b4d9" title="Отправка команды на сервер" alt="" coords="256,133,411,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,100,249,127,248,132,152,105"/>
+<area shape="rect" id="Node000005" href="$classNetworkClient.html#aa4c59e2d8d1d3b8fac8c703c22fbdf15" title="Гарантирует наличие активного соединения" alt="" coords="459,104,625,144"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="410,140,445,135,446,140,411,145"/>
+<area shape="rect" id="Node000008" href="$classNetworkClient.html#a966002a50412fa18fd7a6053aaab8e5b" title="Проверка состояния соединения" alt="" coords="673,165,881,190"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="411,155,660,168,660,174,411,160"/>
+<area shape="rect" id="Node000006" href="$classNetworkClient.html#a93e26e74286cfe3dc64f3729a9cfbc65" title="Установка соединения с сервером" alt="" coords="690,65,865,90"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="625,105,698,90,700,95,626,110"/>
+<area shape="rect" id="Node000007" href="$classNetworkClient.html#a7f69f5c30fd349d670fae18598737b86" title="Закрытие соединения с сервером" alt="" coords="681,114,874,139"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="625,122,667,123,667,128,625,128"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="626,140,708,159,707,164,625,145"/>
+</map>

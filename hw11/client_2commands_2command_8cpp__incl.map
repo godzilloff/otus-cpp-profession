@@ -1,0 +1,30 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/client/commands/command.cpp" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/client/commands/command.cpp">
+<area shape="rect" id="Node000001" title="Реализация классов команд для клиента операций над множествами" alt="" coords="139,5,373,75"/>
+<area shape="rect" id="Node000002" href="$client_2commands_2command_8h.html" title=" " alt="" coords="207,123,305,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,75,259,109,253,109,253,75"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,269,85,295"/>
+<area shape="poly" id="edge17_Node000001_Node000007" title=" " alt="" coords="225,77,113,198,64,260,60,256,109,194,221,73"/>
+<area shape="rect" id="Node000010" href="$result__parser_8h.html" title=" " alt="" coords="452,123,615,148"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="357,72,487,116,485,121,355,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="372,269,431,295"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,147,338,219,380,258,376,262,334,223,265,150"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,269,187,295"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="207,147,161,165,140,179,124,197,119,211,120,227,133,257,128,259,115,228,113,211,119,195,137,175,158,160,206,142"/>
+<area shape="rect" id="Node000005" href="$client_8h.html" title=" " alt="" coords="133,196,272,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="249,150,222,187,217,184,245,147"/>
+<area shape="rect" id="Node000008" href="$table__data_8h.html" title=" " alt="" coords="347,196,495,221"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="284,146,383,188,381,193,282,150"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="235,219,359,263,358,268,234,224"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="196,223,167,260,163,257,192,220"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="211,269,328,295"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="216,220,251,257,247,261,212,223"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="178,224,84,266,82,261,176,219"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="421,222,411,257,406,255,415,221"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="553,269,615,295"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="449,219,546,261,544,266,446,224"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="535,149,529,184,521,204,510,223,479,250,445,269,442,264,476,246,506,220,517,202,524,183,530,148"/>
+<area shape="poly" id="edge13_Node000010_Node000008" title=" " alt="" coords="517,150,453,191,450,186,514,146"/>
+<area shape="poly" id="edge15_Node000010_Node000009" title=" " alt="" coords="588,146,627,164,645,177,660,195,664,215,656,234,639,251,620,265,617,260,636,247,651,231,659,214,655,197,642,181,625,168,586,151"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="571,196,645,221"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="547,146,588,185,584,188,543,150"/>
+</map>

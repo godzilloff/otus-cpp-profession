@@ -1,0 +1,6 @@
+<map id="InsertCommand" name="InsertCommand">
+<area shape="rect" id="Node000001" title="Команда INSERT для добавления данных в таблицу" alt="" coords="5,199,148,344"/>
+<area shape="rect" id="Node000002" href="$classICommand.html" title="Базовый интерфейс для всех команд" alt="" coords="16,5,137,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,164,71,198,65,198,65,164"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="88,164,88,198,83,198,83,164"/>
+</map>

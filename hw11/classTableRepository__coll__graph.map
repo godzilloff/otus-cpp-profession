@@ -1,0 +1,5 @@
+<map id="TableRepository" name="TableRepository">
+<area shape="rect" id="Node000001" title="Реализация репозитория для работы с таблицами базы данных" alt="" coords="5,199,187,344"/>
+<area shape="rect" id="Node000002" href="$classITableRepository.html" title="Интерфейс репозитория для операций с таблицами A и B." alt="" coords="5,5,187,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,164,99,198,93,198,93,164"/>
+</map>

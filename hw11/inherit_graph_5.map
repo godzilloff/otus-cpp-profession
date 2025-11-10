@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classITableRepository.html" title="Интерфейс репозитория для операций с таблицами A и B." alt="" coords="5,5,136,31"/>
+<area shape="rect" id="Node000001" href="$classTableRepository.html" title="Реализация репозитория для работы с таблицами базы данных" alt="" coords="184,5,311,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="150,15,184,15,184,21,150,21"/>
+</map>

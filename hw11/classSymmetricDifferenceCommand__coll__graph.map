@@ -1,0 +1,6 @@
+<map id="SymmetricDifferenceCommand" name="SymmetricDifferenceCommand">
+<area shape="rect" id="Node000001" title="Команда SYMMETRIC_DIFFERENCE для получения симметрической разности" alt="" coords="5,199,249,344"/>
+<area shape="rect" id="Node000002" href="$classICommand.html" title="Базовый интерфейс для всех команд" alt="" coords="67,5,188,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,164,121,198,116,198,116,164"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="139,164,139,198,133,198,134,164"/>
+</map>

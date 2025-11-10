@@ -1,0 +1,5 @@
+<map id="CommandExecutor::execute_command" name="CommandExecutor::execute_command">
+<area shape="rect" id="Node000001" title="Выполняет одиночную команду" alt="" coords="257,5,461,45"/>
+<area shape="rect" id="Node000002" href="$classCommandExecutor.html#ab010173512aecf10ef98368a6fb40f65" title="Выполняет набор команд последовательно" alt="" coords="5,5,209,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,28,210,28,210,23,244,23"/>
+</map>

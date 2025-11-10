@@ -1,0 +1,18 @@
+<map id="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/database/database.h" name="/home/runner/work/otus&#45;cpp&#45;profession/otus&#45;cpp&#45;profession/hw11/join/app/server/database/database.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="433,5,640,75"/>
+<area shape="rect" id="Node000002" href="$database_8cpp.html" title="Реализация класса Database для работы с SQLite." alt="" coords="185,123,408,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,83,368,125,366,120,453,78"/>
+<area shape="rect" id="Node000003" href="$repository_8h.html" title="Заголовочный файл репозитория для операций с таблицами базы данных" alt="" coords="431,123,642,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="539,89,539,122,534,122,534,89"/>
+<area shape="rect" id="Node000011" href="$server_8h.html" title=" " alt="" coords="652,240,843,309"/>
+<area shape="poly" id="edge8_Node000001_Node000011" title=" " alt="" coords="608,80,656,121,701,181,734,238,729,241,697,184,652,125,604,85"/>
+<area shape="rect" id="Node000004" href="$server_2commands_2command_8h.html" title="Заголовочный файл, содержащий интерфейс и реализации команд для работы с сервером множеств" alt="" coords="153,240,377,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="446,200,345,242,343,237,444,195"/>
+<area shape="rect" id="Node000015" href="$repository_8cpp.html" title="Реализация репозитория для работы с таблицами базы данных" alt="" coords="401,240,627,309"/>
+<area shape="poly" id="edge6_Node000003_Node000015" title=" " alt="" coords="530,206,523,240,518,239,525,205"/>
+<area shape="poly" id="edge7_Node000003_Node000011" title=" " alt="" coords="611,196,687,237,684,242,609,201"/>
+<area shape="rect" id="Node000005" href="$server_2commands_2command_8cpp.html" title="Реализация классов команд для сервера операций над множествами" alt="" coords="5,357,244,427"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="215,320,168,359,164,355,212,316"/>
+<area shape="rect" id="Node000006" href="$command__factory_8h.html" title=" " alt="" coords="269,357,543,427"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="318,316,366,355,363,359,315,320"/>
+</map>
