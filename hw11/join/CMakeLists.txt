@@ -27,7 +27,6 @@ endif()
 # === BOOST ===
 find_package(Boost REQUIRED COMPONENTS 
     system
-    # filesystem, program_options, iostreams
 )
 
 if(Boost_FOUND)
@@ -38,31 +37,23 @@ else()
     message(FATAL_ERROR "Boost not found! Please set BOOST_ROOT environment variable.")
 endif()
 
-# === Google Test ===
-# Условная загрузка GTest
-if(BUILD_TESTING)
-    if(MSVC AND NOT GTEST_FOUND)
-        set(GTEST_ROOT "c:/lib/googletest/" CACHE PATH "Path to Google Test")
-    endif()
+# === SQLite3 ===
+# Простой и надежный способ поиска SQLite3
+find_path(SQLITE3_INCLUDE_DIR sqlite3.h)
+find_library(SQLITE3_LIBRARY NAMES sqlite3)
+
+if(SQLITE3_INCLUDE_DIR AND SQLITE3_LIBRARY)
+    message(STATUS "Found SQLite3: ${SQLITE3_LIBRARY}")
+    message(STATUS "SQLite3 include dir: ${SQLITE3_INCLUDE_DIR}")
     
-    find_package(GTest)
-    if(GTest_FOUND)
-        message(STATUS "GTest found: ${GTest_VERSION}")
-        include(GoogleTest)
-    else()
-        message(WARNING "GTest not found - tests will be disabled")
-    endif()
-endif()
-
-# === Библиотека SQLite ===
-# Опция для выбора типа сборки SQLite
-option(BUILD_STATIC_SQLITE "Build SQLite as static library" ON)
-option(USE_SYSTEM_SQLITE "Use system SQLite if available" ON)
-
-# Для Windows используем прекомпиленные библиотеки
-# Для Linux/macOS компилируем из исходников
-
-if(WIN32 AND NOT BUILD_STATIC_SQLITE)
+    add_library(sqlite3 INTERFACE IMPORTED)
+    set_target_properties(sqlite3 PROPERTIES
+        INTERFACE_INCLUDE_DIRECTORIES "${SQLITE3_INCLUDE_DIR}"
+        INTERFACE_LINK_LIBRARIES "${SQLITE3_LIBRARY}"
+    )
+else()
+    #message(FATAL_ERROR "SQLite3 not found! Please install libsqlite3-dev")
+        
     # Windows: используем прекомпиленные DLL
     message(STATUS "Using precompiled SQLite3 DLL for Windows")
     
@@ -82,41 +73,18 @@ if(WIN32 AND NOT BUILD_STATIC_SQLITE)
         INTERFACE_INCLUDE_DIRECTORIES ${SQLITE3_INCLUDE_DIR}
     )
     
-    # Копируем DLL в выходную директорию
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy
-            ${SQLITE3_LIB_DIR}/sqlite3.dll
-            $<TARGET_FILE_DIR:${PROJECT_NAME}>
-    )
-    
-else()
-    # Linux/macOS или статическая сборка на Windows: компилируем из исходников
-    if(USE_SYSTEM_SQLITE)
-        # Пытаемся найти системную библиотеку
-        find_package(PkgConfig QUIET)
-        if(PkgConfig_FOUND)
-            pkg_check_modules(SQLITE3 QUIET sqlite3)
-        endif()
-        
-        if(SQLITE3_FOUND)
-            message(STATUS "Using system SQLite3 library")
-            add_library(sqlite3_system INTERFACE IMPORTED)
-            set_target_properties(sqlite3_system PROPERTIES
-                INTERFACE_LINK_LIBRARIES ${SQLITE3_LIBRARIES}
-                INTERFACE_INCLUDE_DIRECTORIES ${SQLITE3_INCLUDE_DIRS}
-                INTERFACE_COMPILE_OPTIONS "${SQLITE3_CFLAGS_OTHER}"
-            )
-            add_library(sqlite3 ALIAS sqlite3_system)
-        else()
-            message(STATUS "System SQLite3 not found, building from source")
-            add_subdirectory(third_party/sqlite3)
-        endif()
-    else()
-        message(STATUS "Building SQLite3 from source")
-        add_subdirectory(third_party/sqlite3)
-    endif()
 endif()
 
+# === Google Test ===
+if(BUILD_TESTING)
+    find_package(GTest)
+    if(GTest_FOUND)
+        message(STATUS "GTest found: ${GTest_VERSION}")
+        include(GoogleTest)
+    else()
+        message(WARNING "GTest not found - tests will be disabled")
+    endif()
+endif()
 
 # === Сервер join_server ===
 add_executable(join_server 
@@ -130,7 +98,7 @@ add_executable(join_server
     app/server/network/session.cpp
 )
 
-# === Клиент <-> Сервер ===
+# === Клиент join_client ===
 add_executable(join_client 
     app/client/main.cpp
     app/client/network/client.cpp
@@ -138,28 +106,41 @@ add_executable(join_client
     app/client/commands/command_executor.cpp
 )
 
-target_link_libraries(join_server PRIVATE sqlite3)
-target_link_libraries(join_client PRIVATE sqlite3)
-
-
-target_include_directories(join_server PUBLIC 
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-    $<INSTALL_INTERFACE:include>
+# Подключаем зависимости для сервера
+target_link_libraries(join_server PRIVATE 
+    Boost::system
+    sqlite3
 )
 
-# линкуем Boost
-target_link_libraries(join_server PUBLIC Boost::boost)  # Заголовочные зависимости
-target_link_libraries(join_server PRIVATE Boost::system) # Библиотечные зависимости
+# Подключаем зависимости для клиента
+target_link_libraries(join_client PRIVATE 
+    Boost::system
+    # Клиенту не нужен sqlite3, только серверу
+)
+
+# Настройки include директорий для сервера
+target_include_directories(join_server PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/app/server
+)
+
+# Настройки include директорий для клиента
+target_include_directories(join_client PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/app/client
+)
 
 # Настройки для Windows
 if(WIN32)
-    # Отключаем предупреждения для Boost и настраиваем Windows target
-    target_compile_definitions(join_server PRIVATE _WIN32_WINNT=0x0601)
-    target_compile_definitions(join_server PRIVATE _CRT_SECURE_NO_WARNINGS)
+    target_compile_definitions(join_server PRIVATE 
+        _WIN32_WINNT=0x0601
+        _CRT_SECURE_NO_WARNINGS
+    )
+    target_compile_definitions(join_client PRIVATE 
+        _WIN32_WINNT=0x0601
+        _CRT_SECURE_NO_WARNINGS
+    )
 endif()
 
-# Настройки именования библиотеки
+# Настройки именования
 set_target_properties(join_server PROPERTIES
     OUTPUT_NAME "join_server"
     SOVERSION ${PROJECT_VERSION_MAJOR}
@@ -170,65 +151,27 @@ if(NOT WIN32)
     set_target_properties(join_server PROPERTIES PREFIX "lib")
 endif()
 
-
-target_include_directories(join_client PRIVATE 
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
-
-# Линкуем библиотеку Boost
-target_link_libraries(join_client PRIVATE Boost::system)
-
-if(WIN32)
-    target_compile_definitions(join_server PRIVATE _WIN32_WINNT=0x0601)
-endif()
-
-target_include_directories(join_client PRIVATE 
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_link_libraries(join_client PRIVATE Boost::system)
-
-if(WIN32)
-    target_compile_definitions(join_client PRIVATE _WIN32_WINNT=0x0601)
-endif()
-
 # === Настройки компилятора ===
-# Универсальные настройки предупреждений
 if(MSVC)
     target_compile_options(join_server PRIVATE /W4 /permissive-)
     target_compile_options(join_client PRIVATE /W4 /permissive-)
 else()
-    target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic -Werror)
-    target_compile_options(join_client PRIVATE -Wall -Wextra -pedantic -Werror)
+    target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic)
+    target_compile_options(join_client PRIVATE -Wall -Wextra -pedantic)
 endif()
 
 # === Настройки для Visual Studio ===
 if(MSVC)
     set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-    
-    # Группировка проектов в Solution Explorer
     set_target_properties(join_server PROPERTIES FOLDER "Applications")
     set_target_properties(join_client PROPERTIES FOLDER "Applications")
-    
-    # Установка стартового проекта
     set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} 
                  PROPERTY VS_STARTUP_PROJECT join_server)
 endif()
 
 # === Установка ===
 install(TARGETS join_server join_client
-    EXPORT join_server-targets
     RUNTIME DESTINATION bin
-    LIBRARY DESTINATION lib
-    ARCHIVE DESTINATION lib
-    INCLUDES DESTINATION include
-)
-
-# Установка заголовочных файлов
-install(DIRECTORY include/ 
-    DESTINATION include
-    FILES_MATCHING PATTERN "*.h"
 )
 
 # === CPack настройки ===
@@ -237,12 +180,12 @@ set(CPACK_PACKAGE_NAME "join_server")
 set(CPACK_PACKAGE_VENDOR "Otus")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "join commands processing server")
 set(CPACK_PACKAGE_VERSION_MAJOR "0")
-set(CPACK_PACKAGE_VERSION_MINOR "10")
+set(CPACK_PACKAGE_VERSION_MINOR "11")
 set(CPACK_PACKAGE_VERSION_PATCH "${PATCH_VERSION}")
 set(CPACK_PACKAGE_CONTACT "test@gmail.com")
 set(CPACK_DEBIAN_PACKAGE_NAME "join_server")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Test User <test@gmail.com>")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libboost-system1.74 (>= 1.74.0)")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libboost-system1.74 (>= 1.74.0), libsqlite3-0 (>= 3.31.0)")
 set(CPACK_DEBIAN_FILE_NAME "join_server-${PROJECT_VERSION}-Linux.deb")
 
 include(CPack)
