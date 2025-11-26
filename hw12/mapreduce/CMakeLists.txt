@@ -120,14 +120,6 @@ if(BUILD_PACKAGES)
         DESTINATION share/mapreduce-nyc
     )
     
-    # Установка документации
-    install(
-        FILES
-            README.md
-            LICENSE
-        DESTINATION share/doc/mapreduce-nyc
-    )
-    
     # Включение CPack
     include(CPack)
     
