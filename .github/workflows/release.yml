@@ -5,7 +5,7 @@ on:
     tags:
       - v*
     branches:
-      - 'hw11'
+      - 'hw12'
 
 permissions:
   contents: write
@@ -32,7 +32,7 @@ jobs:
             doxygen graphviz plantuml
       
       - name: Configure CMake
-        working-directory: ./hw11/join
+        working-directory: ./hw12/mapreduce
         run: |
           mkdir -p build
           cd build
@@ -40,19 +40,19 @@ jobs:
                 -DPATCH_VERSION=${{ github.run_number }} ..
       
       - name: Build
-        working-directory: ./hw11/join/build
+        working-directory: ./hw12/mapreduce/build
         run: cmake --build . --parallel
       
       - name: Package
-        working-directory: ./hw11/join/build
+        working-directory: ./hw12/mapreduce/build
         run: cmake --build . --target package --parallel
       
       - name: Create Release
         run: |
-          FILE_PATH="./hw11/join/build/join_server-0.11.${{ github.run_number }}-Linux.deb"
+          FILE_PATH="./hw12/mapreduce/build/mapreduce-nyc-0.12.${{ github.run_number }}-Linux.deb"
           [ ! -f "$FILE_PATH" ] && { echo "Error: File $FILE_PATH not found!"; exit 1; }
-          gh release create "v0.11.${{ github.run_number }}" \
-            --title "Release v0.11.${{ github.run_number }}" \
+          gh release create "v0.12.${{ github.run_number }}" \
+            --title "Release v0.12.${{ github.run_number }}" \
             --draft=false \
             --prerelease=false \
             --notes "" \
@@ -62,7 +62,7 @@ jobs:
 
       - name: Generate Doxygen HTML
         run: |
-          cd hw11/join
+          cd hw12/mapreduce
           mkdir -p docs/html
           sed -i 's|OUTPUT_DIRECTORY\s*=\s*.*|OUTPUT_DIRECTORY = ./docs|' Doxyfile
           sed -i 's|HTML_OUTPUT\s*=\s*.*|HTML_OUTPUT = html|' Doxyfile
@@ -72,6 +72,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hw11/join/docs/html
-          destination_dir: hw11
+          publish_dir: ./hw12/mapreduce/docs/html
+          destination_dir: hw12
           keep_files: true
