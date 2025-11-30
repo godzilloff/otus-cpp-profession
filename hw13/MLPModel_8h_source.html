@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FashionMNIST: Исходный файл /home/runner/work/otus-cpp-profession/otus-cpp-profession/hw13/include/MLPModel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FashionMNIST
+   </div>
+   <div id="projectbrief">C++ implementation of MLP model for Fashion MNIST classification</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('MLPModel_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MLPModel.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MLPModel_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="IModel_8h.html">IModel.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MatrixUtils_8h.html">MatrixUtils.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="CSVReader_8h.html">CSVReader.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classMLPModel.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classMLPModel.html">MLPModel</a> : <span class="keyword">public</span> <a class="code hl_class" href="classIModel.html">IModel</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::vector&lt;std::vector&lt;float&gt;&gt; w1_; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;std::vector&lt;float&gt;&gt; w2_; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> is_loaded_ = <span class="keyword">false</span>;             </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classMLPModel.html#abe27c51fce2d1b6cb4a366d9dd73e1d0">   26</a></span>    <a class="code hl_function" href="classMLPModel.html#abe27c51fce2d1b6cb4a366d9dd73e1d0">MLPModel</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classMLPModel.html#aece8b9f48cc97143b44b0185337f483a">   27</a></span>    <a class="code hl_function" href="classMLPModel.html#aece8b9f48cc97143b44b0185337f483a">~MLPModel</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMLPModel.html#a75f055668e3fea3d3beb18b471521494">loadModel</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; model_paths) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMLPModel.html#a024579b06700ef4e8a95bbbca449f280">predict</a>(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; image) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::vector&lt;int&gt; <a class="code hl_function" href="classMLPModel.html#ac19a3ad6f878f427fd792be5c35c00d7">predictBatch</a>(<span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt;&gt;&amp; images) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classMLPModel.html#a2ec7eeea70c1c93bd5fe4b822319f6f3">   54</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMLPModel.html#a2ec7eeea70c1c93bd5fe4b822319f6f3">isLoaded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> is_loaded_; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classMLPModel.html#a7359d3268fcf7b0e53eb02af406bcc13">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMLPModel.html#a7359d3268fcf7b0e53eb02af406bcc13">printModelInfo</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (!is_loaded_) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Model is not loaded&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// std::cout &lt;&lt; &quot;MLP Model Info:&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// std::cout &lt;&lt; &quot;  Layer 1 weights: &quot; &lt;&lt; w1_.size() &lt;&lt; &quot; x &quot; &lt;&lt; (w1_.empty() ? 0 : w1_[0].size()) &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// std::cout &lt;&lt; &quot;  Layer 2 weights: &quot; &lt;&lt; w2_.size() &lt;&lt; &quot; x &quot; &lt;&lt; (w2_.empty() ? 0 : w2_[0].size()) &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::vector&lt;float&gt; forwardPass(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; input) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
+</div>
+<div class="ttc" id="aCSVReader_8h_html"><div class="ttname"><a href="CSVReader_8h.html">CSVReader.h</a></div><div class="ttdoc">Класс для чтения CSV файлов с данными Fashion MNIST.</div></div>
+<div class="ttc" id="aIModel_8h_html"><div class="ttname"><a href="IModel_8h.html">IModel.h</a></div><div class="ttdoc">Интерфейс для моделей машинного обучения</div></div>
+<div class="ttc" id="aMatrixUtils_8h_html"><div class="ttname"><a href="MatrixUtils_8h.html">MatrixUtils.h</a></div><div class="ttdoc">Утилиты для работы с матрицами и математическими операциями</div></div>
+<div class="ttc" id="aclassIModel_html"><div class="ttname"><a href="classIModel.html">IModel</a></div><div class="ttdoc">Интерфейс для моделей классификации</div><div class="ttdef"><b>Definition</b> IModel.h:14</div></div>
+<div class="ttc" id="aclassMLPModel_html"><div class="ttname"><a href="classMLPModel.html">MLPModel</a></div><div class="ttdoc">Многослойный перцептрон с двумя скрытыми слоями</div><div class="ttdef"><b>Definition</b> MLPModel.h:19</div></div>
+<div class="ttc" id="aclassMLPModel_html_a024579b06700ef4e8a95bbbca449f280"><div class="ttname"><a href="classMLPModel.html#a024579b06700ef4e8a95bbbca449f280">MLPModel::predict</a></div><div class="ttdeci">int predict(const std::vector&lt; float &gt; &amp;image) override</div><div class="ttdoc">Предсказывает класс для одного изображения</div><div class="ttdef"><b>Definition</b> MLPModel.cpp:41</div></div>
+<div class="ttc" id="aclassMLPModel_html_a2ec7eeea70c1c93bd5fe4b822319f6f3"><div class="ttname"><a href="classMLPModel.html#a2ec7eeea70c1c93bd5fe4b822319f6f3">MLPModel::isLoaded</a></div><div class="ttdeci">bool isLoaded() const</div><div class="ttdoc">Проверяет загружена ли модель</div><div class="ttdef"><b>Definition</b> MLPModel.h:54</div></div>
+<div class="ttc" id="aclassMLPModel_html_a7359d3268fcf7b0e53eb02af406bcc13"><div class="ttname"><a href="classMLPModel.html#a7359d3268fcf7b0e53eb02af406bcc13">MLPModel::printModelInfo</a></div><div class="ttdeci">void printModelInfo() const</div><div class="ttdoc">Выводит информацию о модели</div><div class="ttdef"><b>Definition</b> MLPModel.h:59</div></div>
+<div class="ttc" id="aclassMLPModel_html_a75f055668e3fea3d3beb18b471521494"><div class="ttname"><a href="classMLPModel.html#a75f055668e3fea3d3beb18b471521494">MLPModel::loadModel</a></div><div class="ttdeci">bool loadModel(const std::vector&lt; std::string &gt; &amp;model_paths) override</div><div class="ttdoc">Загружает веса модели из файлов</div><div class="ttdef"><b>Definition</b> MLPModel.cpp:9</div></div>
+<div class="ttc" id="aclassMLPModel_html_abe27c51fce2d1b6cb4a366d9dd73e1d0"><div class="ttname"><a href="classMLPModel.html#abe27c51fce2d1b6cb4a366d9dd73e1d0">MLPModel::MLPModel</a></div><div class="ttdeci">MLPModel()=default</div></div>
+<div class="ttc" id="aclassMLPModel_html_ac19a3ad6f878f427fd792be5c35c00d7"><div class="ttname"><a href="classMLPModel.html#ac19a3ad6f878f427fd792be5c35c00d7">MLPModel::predictBatch</a></div><div class="ttdeci">std::vector&lt; int &gt; predictBatch(const std::vector&lt; std::vector&lt; float &gt; &gt; &amp;images) override</div><div class="ttdoc">Предсказывает классы для набора изображений</div><div class="ttdef"><b>Definition</b> MLPModel.cpp:69</div></div>
+<div class="ttc" id="aclassMLPModel_html_aece8b9f48cc97143b44b0185337f483a"><div class="ttname"><a href="classMLPModel.html#aece8b9f48cc97143b44b0185337f483a">MLPModel::~MLPModel</a></div><div class="ttdeci">~MLPModel() override=default</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="MLPModel_8h.html">MLPModel.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

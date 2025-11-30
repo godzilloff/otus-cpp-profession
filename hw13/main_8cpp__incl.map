@@ -1,0 +1,43 @@
+<map id="main.cpp" name="main.cpp">
+<area shape="rect" id="Node000001" title="Главный файл приложения для классификации Fashion MNIST." alt="" coords="583,5,665,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,225,85,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="583,30,505,47,403,74,289,110,177,154,120,186,72,219,69,215,117,182,175,150,287,105,402,69,504,42,582,25"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="615,225,678,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="607,33,583,53,564,80,561,91,564,103,576,135,593,165,629,213,625,217,588,168,571,137,559,105,556,91,559,78,579,49,604,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="709,225,768,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="666,25,716,41,773,65,828,101,851,124,870,151,875,166,873,180,865,192,852,202,818,219,782,230,780,225,816,214,849,198,861,188,868,178,870,166,866,153,847,128,825,105,771,70,715,46,665,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="779,152,856,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="641,29,792,141,789,146,638,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="931,79,1005,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="666,25,918,77,917,82,665,30"/>
+<area shape="rect" id="Node000007" href="$MLPModel_8h.html" title="Реализация многослойного перцептрона для классификации Fashion MNIST." alt="" coords="573,79,675,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="627,31,627,65,621,65,621,31"/>
+<area shape="rect" id="Node000013" href="$CSVReader_8h.html" title="Класс для чтения CSV файлов с данными Fashion MNIST." alt="" coords="262,152,367,177"/>
+<area shape="poly" id="edge26_Node000001_Node000013" title=" " alt="" coords="600,33,352,149,350,144,598,28"/>
+<area shape="poly" id="edge25_Node000007_Node000002" title=" " alt="" coords="573,100,427,118,338,133,250,155,158,187,81,222,79,217,156,182,249,149,337,128,426,112,573,94"/>
+<area shape="poly" id="edge23_Node000007_Node000003" title=" " alt="" coords="622,105,615,138,613,157,616,177,633,213,628,215,611,178,608,158,609,137,617,104"/>
+<area shape="poly" id="edge24_Node000007_Node000004" title=" " alt="" coords="653,102,687,121,718,150,733,181,739,211,734,212,728,183,714,154,684,126,651,106"/>
+<area shape="poly" id="edge22_Node000007_Node000005" title=" " alt="" coords="656,102,774,145,772,150,654,107"/>
+<area shape="rect" id="Node000008" href="$IModel_8h.html" title="Интерфейс для моделей машинного обучения" alt="" coords="625,152,703,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="633,103,653,139,648,141,628,106"/>
+<area shape="rect" id="Node000009" href="$MatrixUtils_8h.html" title="Утилиты для работы с матрицами и математическими операциями" alt="" coords="392,152,499,177"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="596,107,488,149,486,144,594,102"/>
+<area shape="poly" id="edge15_Node000007_Node000013" title=" " alt="" coords="575,107,378,152,377,146,574,101"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="664,178,655,213,650,212,659,177"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="678,175,718,214,715,218,674,179"/>
+<area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="479,175,603,219,602,224,477,180"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="418,225,481,251"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="449,178,451,212,445,212,443,178"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="505,225,591,251"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="463,175,521,215,518,219,460,180"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="307,225,394,251"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="432,179,379,219,376,215,429,175"/>
+<area shape="poly" id="edge16_Node000013_Node000002" title=" " alt="" coords="272,180,99,225,98,220,271,175"/>
+<area shape="poly" id="edge17_Node000013_Node000003" title=" " alt="" coords="368,173,602,223,601,228,367,179"/>
+<area shape="poly" id="edge18_Node000013_Node000004" title=" " alt="" coords="368,173,380,175,536,197,691,223,696,224,695,229,690,228,535,202,380,180,367,178"/>
+<area shape="poly" id="edge21_Node000013_Node000012" title=" " alt="" coords="323,176,341,212,336,214,318,179"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="110,225,183,251"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="289,180,188,222,186,217,287,175"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="208,225,283,251"/>
+<area shape="poly" id="edge20_Node000013_Node000015" title=" " alt="" coords="305,180,268,217,264,214,301,176"/>
+</map>

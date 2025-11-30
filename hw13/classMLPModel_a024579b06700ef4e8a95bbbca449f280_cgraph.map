@@ -1,0 +1,5 @@
+<map id="MLPModel::predict" name="MLPModel::predict">
+<area shape="rect" id="Node000001" title="Предсказывает класс для одного изображения" alt="" coords="5,5,148,31"/>
+<area shape="rect" id="Node000002" href="$classMatrixUtils.html#ad9f7ff9160aefb8ff1a994a224b02199" title="Находит индекс максимального элемента в векторе" alt="" coords="196,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,15,182,15,182,21,148,21"/>
+</map>

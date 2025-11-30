@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Точка входа в приложение" alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#af287aa41fed687e5013870fbc1426c58" title="Вычисляет accuracy модели" alt="" coords="117,5,257,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,36,102,29,103,34,60,42"/>
+<area shape="rect" id="Node000003" href="$classCSVReader.html#ae47d79ab7563cb7ede4026011bd91e1f" title="Читает CSV файл с данными Fashion MNIST." alt="" coords="108,55,265,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="60,45,95,50,94,56,60,50"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$classIModel.html" title="Интерфейс для моделей классификации" alt="" coords="5,5,72,31"/>
+<area shape="rect" id="Node000001" href="$classMLPModel.html" title="Многослойный перцептрон с двумя скрытыми слоями" alt="" coords="120,5,209,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="86,15,120,15,120,21,86,21"/>
+</map>

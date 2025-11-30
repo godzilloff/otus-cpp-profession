@@ -1,0 +1,37 @@
+<map id="MLPModel.cpp" name="MLPModel.cpp">
+<area shape="rect" id="Node000001" title="Реализация методов MLPModel." alt="" coords="362,5,478,31"/>
+<area shape="rect" id="Node000002" href="$MLPModel_8h.html" title="Реализация многослойного перцептрона для классификации Fashion MNIST." alt="" coords="225,79,327,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,33,313,75,311,70,396,28"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="685,225,771,251"/>
+<area shape="poly" id="edge21_Node000001_Node000009" title=" " alt="" coords="438,29,702,215,699,220,435,33"/>
+<area shape="rect" id="Node000003" href="$IModel_8h.html" title="Интерфейс для моделей машинного обучения" alt="" coords="25,152,103,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,107,112,150,110,145,241,101"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,225,163,251"/>
+<area shape="poly" id="edge18_Node000002_Node000004" title=" " alt="" coords="243,107,204,125,169,154,151,183,140,213,135,211,146,180,165,150,202,121,241,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="17,225,76,251"/>
+<area shape="poly" id="edge19_Node000002_Node000005" title=" " alt="" coords="226,99,167,106,103,117,48,133,27,143,14,154,8,167,11,183,29,214,24,216,6,185,3,167,10,150,24,138,46,128,102,112,166,101,225,94"/>
+<area shape="rect" id="Node000006" href="$MatrixUtils_8h.html" title="Утилиты для работы с матрицами и математическими операциями" alt="" coords="477,152,584,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="318,101,477,146,476,151,316,107"/>
+<area shape="rect" id="Node000010" href="$CSVReader_8h.html" title="Класс для чтения CSV файлов с данными Fashion MNIST." alt="" coords="281,152,386,177"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="287,103,317,139,313,143,283,106"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="384,225,464,251"/>
+<area shape="poly" id="edge20_Node000002_Node000011" title=" " alt="" coords="321,102,363,120,383,134,401,150,417,180,424,211,419,212,412,182,397,154,380,138,360,125,318,106"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="179,152,256,177"/>
+<area shape="poly" id="edge17_Node000002_Node000014" title=" " alt="" coords="268,106,237,143,233,140,264,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,176,113,213,109,217,73,180"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="64,178,55,213,50,212,59,177"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="477,176,345,197,177,228,176,223,344,191,476,171"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="598,225,661,251"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="548,175,604,215,601,219,545,180"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="488,225,573,251"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="533,178,533,212,528,212,528,178"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="563,175,684,218,682,223,561,180"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="302,180,177,224,175,219,300,175"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="286,180,90,228,90,228,88,223,89,223,284,175"/>
+<area shape="poly" id="edge16_Node000010_Node000009" title=" " alt="" coords="387,172,672,222,671,228,386,177"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="349,175,400,214,397,219,346,179"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="187,225,261,251"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="317,180,255,220,252,215,314,175"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="285,225,360,251"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="334,178,329,212,324,211,329,177"/>
+</map>

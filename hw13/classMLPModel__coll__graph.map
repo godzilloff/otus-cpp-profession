@@ -1,0 +1,5 @@
+<map id="MLPModel" name="MLPModel">
+<area shape="rect" id="Node000001" title="Многослойный перцептрон с двумя скрытыми слоями" alt="" coords="5,179,139,364"/>
+<area shape="rect" id="Node000002" href="$classIModel.html" title="Интерфейс для моделей классификации" alt="" coords="11,5,133,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,145,75,178,69,178,69,145"/>
+</map>
